@@ -1,11 +1,9 @@
-#Most Cookies 
-
-####Flask 
-
+# Most Cookies 
+#### Flask 
 Flask is a lightweight, web development framework built using python language. Generally, for building websites we use HTML, CSS and JavaScript but in flask the python scripting language is used for developing the web-applications.
-####What are Cookies?
+#### What are Cookies?
 Technically, cookies track user activity to save user information in the browser as key-value pairs, which can then be accessed whenever necessary by the developers to make a website easier to use. These enhances the personal user experience on a particular website by remembering your logins, your preferences and much more. 
-####Solution
+#### Solution
 - Flask cookies are encoded using a secret key
 - The secret key is used to generate a signature for each cookie that is sent to the browser
 - The browser can then send back the cookie and the server can verify the signature

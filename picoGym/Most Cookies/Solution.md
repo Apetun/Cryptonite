@@ -14,5 +14,7 @@ Technically, cookies track user activity to save user information in the browser
   app.secret_key = random.choice(cookie_names)
     ```
 - Inspecting the source of the webpage we can see the cookie for our current session is  ```eyJ2ZXJ5X2F1dGgiOiJibGFuayJ9.ZUHZXA.Xu93eosN2C_t6xBIPf1Y2cScyrk```
-![](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/Webpage.png)
+
+![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/Webpage.png)
+
 - Using this:https://pypi.org/project/flask-unsign/ tool to decprypt the cookie 

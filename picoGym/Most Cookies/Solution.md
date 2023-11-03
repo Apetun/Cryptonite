@@ -17,4 +17,18 @@ Technically, cookies track user activity to save user information in the browser
 
 ![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/Webpage.png)
 
-- Using this:https://pypi.org/project/flask-unsign/ tool to decprypt the cookie 
+- Using this:https://pypi.org/project/flask-unsign/ tool to decrypt the cookie 
+
+![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/1.png)
+
+- Using the cookie.txt file to brute force the secret key
+
+![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/2.png)
+
+- Signing ```{"very_auth":"admin"}``` using the secret key ```fortune```
+
+![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/3.png)
+
+- Changing the cookie on the webpage we get the flag
+
+![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Most%20Cookies/4.png)

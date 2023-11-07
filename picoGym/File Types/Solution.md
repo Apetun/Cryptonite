@@ -3,6 +3,7 @@
 #### Solution
 - Running ```file``` command on the file we get it is an excecutable file
 - Running ```sh``` command on the file we get
+  
 ![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/File%20Types/Screenshot%202023-11-04%20000807.png)
 - After a bit of research we find out the file is a shell archive file installing the ```sharutils``` package we can extract the file
 ![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/File%20Types/Screenshot%202023-11-04%20000854.png)

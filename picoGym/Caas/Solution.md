@@ -21,6 +21,6 @@ exec(`/usr/games/cowsay ${req.params.message}`, {timeout: 5000}, (error, stdout)
 
 ![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Caas/Screenshot%202023-11-09%20093221.png)
 
-- Opening the falg.txt file using the url ```https://caas.mars.picoctf.net/cowsay/t;cat flag.txt``` we get the flag
+- Opening the falg.txt file using the url ```https://caas.mars.picoctf.net/cowsay/t;cat falg.txt``` we get the flag
 
 ![alt text](https://github.com/Apetun/CryptoniteSTP/blob/main/picoGym/Caas/eqqeq.png)

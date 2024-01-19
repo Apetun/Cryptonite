@@ -198,1133 +198,472 @@ OFFLINEK={1} # Offline keylogging
 
 - Handles related to the malware can be found using the command ```python2 vol.py -f bruh.raw --profile=Win7SP1x86_23418 handles -p 300```
 - The output is verbose but the only interesting handle seems to be the mutant name being ```DC_MUTEX-KHNEW06```
-```bash
-    Offset(V)     Pid     Handle     Access Type             Details
----------- ------ ---------- ---------- ---------------- -------
-0x99ddf7c8    300        0x4        0x3 Directory        KnownDlls
-0x84362038    300        0x8   0x100020 File             \Device\HarddiskVolume1\Users\0xSh3rl0ck\Desktop
-0x843b02c8    300        0xc   0x100020 File             \Device\HarddiskVolume1\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_ec86b8d6858ec0bc
-0x843adf80    300       0x10   0x100020 File             \Device\HarddiskVolume1\Windows\winsxs\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.24203_none_5c030043a0118fbf
-0x843ac528    300       0x14   0x1f0001 ALPC Port        
-0x9c02bbb0    300       0x18    0x20019 Key              MACHINE\SYSTEM\CONTROLSET001\CONTROL\NLS\SORTING\VERSIONS
-0xa88b3248    300       0x1c        0x1 Key              MACHINE\SYSTEM\CONTROLSET001\CONTROL\SESSION MANAGER
-0x84396d18    300       0x20      0x804 EtwRegistration  
-0x843b0698    300       0x24  0x21f0003 Event            
-0x85ed4428    300       0x28    0xf037f WindowStation    WinSta0
-0x85e9e590    300       0x2c    0xf01ff Desktop          Default
-0x85ed4428    300       0x30    0xf037f WindowStation    WinSta0
-0x9c018288    300       0x34    0xf003f Key              MACHINE
-0x84396228    300       0x38      0x804 EtwRegistration  
-0x84396298    300       0x3c   0x1f0003 Event            
-0x843961e0    300       0x40   0x1f0003 Event            
-0x843961a0    300       0x44   0x1f0003 Event            
-0x84396460    300       0x48   0x1f0003 Event            
-0x84396420    300       0x4c   0x1f0003 Event            
-0x843963e0    300       0x50   0x1f0003 Event            
-0x87cf6780    300       0x54        0xf Directory        BaseNamedObjects
-0x843b0728    300       0x58   0x1f0001 Mutant           
-0x843b0b28    300       0x5c   0x1f0001 Mutant           
-0x843963a0    300       0x60   0x1f0003 Event            
-0x84396640    300       0x64      0x804 EtwRegistration  
-0x843965c8    300       0x68      0x804 EtwRegistration  
-0x84398718    300       0x6c      0x804 EtwRegistration  
-0x843986a0    300       0x70      0x804 EtwRegistration  
-0x84398628    300       0x74      0x804 EtwRegistration  
-0x843637c0    300       0x78      0x804 EtwRegistration  
-0x84363748    300       0x7c      0x804 EtwRegistration  
-0x843636d0    300       0x80      0x804 EtwRegistration  
-0x843968c0    300       0x84      0x804 EtwRegistration  
-0x84396848    300       0x88      0x804 EtwRegistration  
-0x843967d0    300       0x8c      0x804 EtwRegistration  
-0x843affc0    300       0x90      0x804 EtwRegistration  
-0x843aff48    300       0x94      0x804 EtwRegistration  
-0x843afe58    300       0x98      0x804 EtwRegistration  
-0x843afed0    300       0x9c      0x804 EtwRegistration  
-0x843afde0    300       0xa0      0x804 EtwRegistration  
-0x84396580    300       0xa4   0x1f0003 Event            
-0x843afd78    300       0xa8   0x100003 Semaphore        
-0x843ae8e0    300       0xac   0x100003 Semaphore        
-0x843c76b0    300       0xb0   0x100003 Semaphore        
-0x8438fdd0    300       0xb4   0x100003 Semaphore        
-0x8438fd88    300       0xb8   0x100003 Semaphore        
-0x8438fd40    300       0xbc   0x100003 Semaphore        
-0x8438fd00    300       0xc0   0x1f0003 Event            
-0x8438fcc0    300       0xc4   0x1f0003 Event            
-0x84398570    300       0xc8   0x120089 File             \Device\HarddiskVolume1\Windows\System32\en-US\msvfw32.dll.mui
-0x843af460    300       0xcc   0x120089 File             \Device\HarddiskVolume1\Windows\System32\en-US\avicap32.dll.mui
-0x9ca80fd0    300       0xd0    0xf003f Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000
-0x84368df8    300       0xd4      0x804 EtwRegistration  
-0x84368d80    300       0xd8      0x804 EtwRegistration  
-0x84368c48    300       0xdc   0x1f0001 ALPC Port        
-0x8fa4ddc8    300       0xe0        0x4 Section          
-0x84368c00    300       0xe4   0x1f0003 Event            
-0x8438f378    300       0xe8   0x1f0003 Event            
-0x8438f338    300       0xec   0x1f0003 Event            
-0x8438f1c8    300       0xf0      0x804 EtwRegistration  
-0x8438f240    300       0xf4      0x804 EtwRegistration  
-0x843c7038    300       0xf8   0x120089 File             \Device\HarddiskVolume1\Windows\System32\en-US\user32.dll.mui
-0x8438f2b0    300       0xfc   0x1f0003 Event            
-0x8436bd48    300      0x100   0x1fffff Thread           TID 3116 PID 300
-0x8436bd08    300      0x104   0x1f0003 Event            
-0x8436a030    300      0x108   0x1fffff Thread           TID 2144 PID 300
-0x87d3bfd0    300      0x10c    0xf003f Key              MACHINE\SYSTEM\CONTROLSET001\SERVICES\WINSOCK2\PARAMETERS\PROTOCOL_CATALOG9
-0x8438f0e8    300      0x110   0x1f0003 Event            
-0x9c018370    300      0x114    0xf003f Key              MACHINE\SYSTEM\CONTROLSET001\SERVICES\WINSOCK2\PARAMETERS\NAMESPACE_CATALOG5
-0x84398fa8    300      0x118   0x1f0003 Event            
-0x84398f68    300      0x11c   0x1f0003 Event            
-0x843c7700    300      0x120   0x100001 File             \Device\KsecDD
-0x8fa8f8d0    300      0x124       0x28 Token            
-0x84398f28    300      0x128   0x1f0003 Event            
-0x84398ee8    300      0x12c   0x1f0003 Event            
-0x84398ea8    300      0x130   0x1f0003 Event            
-0x84398dc0    300      0x134      0x804 EtwRegistration  
-0x84398e38    300      0x138      0x804 EtwRegistration  
-0x84398d78    300      0x13c   0x1f0003 Event            
-0x8436a030    300      0x140   0x1fffff Thread           TID 2144 PID 300
-0x8db306a8    300      0x144   0x16019f File             \Device\Afd\Endpoint
-0x862c5a40    300      0x148   0x1f0003 IoCompletion     
-0x85e257a0    300      0x14c    0xf00ff TpWorkerFactory  
-0xa7cd9d00    300      0x150    0xf0003 KeyedEvent       
-0x86132d98    300      0x154   0x100002 Timer            
-0x85e25100    300      0x158   0x1f0003 Timer            
-0x843af688    300      0x15c   0x1fffff Thread           TID 3112 PID 300
-0x843af688    300      0x160   0x1fffff Thread           TID 3112 PID 300
-0x8b6ece00    300      0x164   0x1f0003 IoCompletion     
-0x85e258e0    300      0x168    0xf00ff TpWorkerFactory  
-0x843c71a0    300      0x16c  0x21f0003 Event            
-0x842eb8b8    300      0x170   0x1f0001 Mutant           DC_MUTEX-KHNEW06
-0x85e25598    300      0x174   0x100002 Timer            
-0x843ad600    300      0x178   0x1fffff Thread           TID 2544 PID 300
-0x843ad030    300      0x17c   0x1fffff Thread           TID 100 PID 300
-0x9c028458    300      0x180    0xf003f Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000\SOFTWARE
-0x8aaff6c8    300      0x184        0x6 Section          windows_shell_global_counters
-0x9c0284b8    300      0x188    0x20019 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER\FOLDERDESCRIPTIONS\{905E63B6-C1BF-494E-B29C-65B732D3D21A}\PROPERTYBAG
-0x843ad318    300      0x18c   0x1fffff Thread           TID 2740 PID 2556
-0x84390030    300      0x190   0x1fffff Process          notepad.exe(2556)
-0x84390380    300      0x194   0x1fffff Thread           TID 3008 PID 300
-0x84390690    300      0x198   0x1fffff Thread           TID 3004 PID 2556
-0x9c02a818    300      0x19c        0x8 Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION
-0x9c02d180    300      0x1a0        0x8 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\APPCOMPATFLAGS
-0xa7d89258    300      0x1a4        0x9 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\IMAGE FILE EXECUTION OPTIONS
-0x843e5198    300      0x1a8  0x21f0003 Event            
-0x843c9030    300      0x1ac   0x1fffff Thread           TID 200 PID 300
-0x843e5218    300      0x1b0   0x1f0003 Event            
-0x9c0294d8    300      0x1b4        0x1 Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER
-0x843e51d8    300      0x1b8   0x1f0003 Event            
-0x843e6748    300      0x1bc   0x100020 File             \Device\HarddiskVolume1\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d
-0x843c74d8    300      0x1c0      0x804 EtwRegistration  
-0x843ac1e8    300      0x1c4      0x804 EtwRegistration  
-0x9c02adb0    300      0x1c8    0xf003f Key              MACHINE\SOFTWARE\CLASSES
-0xa887fc50    300      0x1cc    0xf003f Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000_CLASSES
-0x886d6948    300      0x1d0        0x4 Section          __ComCatalogCache__
-0x841ac310    300      0x1d4   0x100001 Event            MaximumCommitCondition
-0x886d6948    300      0x1d8        0x4 Section          __ComCatalogCache__
-0x843b0400    300      0x1dc      0x804 EtwRegistration  
-0xa7d06030    300      0x1e0    0x20003 Directory        
-0xa7cffb38    300      0x1e4        0x4 Section          ASqmManifestVersion
-0x843e6d90    300      0x1e8   0x120089 File             \Device\HarddiskVolume1\Windows\Registration\R000000000006.clb
-0x9c01b860    300      0x1ec    0xf0005 Section          
-0x84384aa0    300      0x1f0      0x804 EtwRegistration  
-0x84384a28    300      0x1f4      0x804 EtwRegistration  
-0x9caa63f0    300      0x1f8        0x6 Section          windows_shell_global_counters
-0x9c0283f8    300      0x1fc    0x20019 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER\FOLDERDESCRIPTIONS\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}\PROPERTYBAG
-0x84384920    300      0x200      0x804 EtwRegistration  
-0x843e5310    300      0x204   0x1f0003 Event            
-0x843848d0    300      0x208   0x100003 Semaphore        
-0x84384888    300      0x20c   0x100003 Semaphore        
-0x84384840    300      0x210   0x100003 Semaphore        
-0x843847f8    300      0x214   0x100003 Semaphore        
-0x843847b0    300      0x218   0x100003 Semaphore        
-0x84384768    300      0x21c   0x100003 Semaphore        
-0x843c9a58    300      0x220   0x100003 Semaphore        
-0x843c9a10    300      0x224   0x100003 Semaphore        
-0x843e70c8    300      0x228      0x804 EtwRegistration  
-0x84262630    300      0x22c      0x804 EtwRegistration  
-0x843e4528    300      0x230   0x1f0003 Event            
-0x843ac810    300      0x234   0x1f0001 Mutant           
-0x843e4620    300      0x238   0x1f0003 Event            
-0x843ac7c0    300      0x23c   0x1f0001 Mutant           
-0x843a5500    300      0x240   0x16019f File             \Device\Afd\Endpoint
-0x860db9b8    300      0x244   0x16019f File             \Device\Afd\Endpoint
-0x85f7ae88    300      0x248   0x1f0001 ALPC Port        
-0x843c9030    300      0x24c   0x1fffff Thread           TID 200 PID 300
-0x843e6ce8    300      0x250   0x1f0003 Event            
-0x84363300    300      0x254  0x21f0003 Event            
-0x84396d90    300      0x258      0x804 EtwRegistration  
-0x843e6038    300      0x25c   0x16019f File             \Device\Afd\Endpoint
-0x841e6b58    300      0x260      0x804 EtwRegistration  
-0x85ba92c8    300      0x264      0x804 EtwRegistration  
-0x861cc660    300      0x268      0x804 EtwRegistration  
-0x843e66a0    300      0x26c   0x1f0003 Event            
-0x843c9030    300      0x270   0x1fffff Thread           TID 200 PID 300
-0x863569e0    300      0x274   0x16019f File             \Device\Afd\Endpoint
-0x843e4870    300      0x278   0x1f0003 Event            
-0x843e4968    300      0x27c   0x1f0003 Event            
-0x843c9350    300      0x280   0x1f0003 Event            
-0x965fffc0    300      0x284      0x804 EtwRegistration  
-0x965fff48    300      0x288      0x804 EtwRegistration  
-0x85456320    300      0x28c      0x804 EtwRegistration  
-0x854562a8    300      0x290      0x804 EtwRegistration  
-0x84297488    300      0x294      0x804 EtwRegistration  
-0x84297410    300      0x298      0x804 EtwRegistration  
-0x84259fc0    300      0x29c      0x804 EtwRegistration  
-0x84259f48    300      0x2a0      0x804 EtwRegistration  
-0x84270a70    300      0x2a4      0x804 EtwRegistration  
-0x842709f8    300      0x2a8      0x804 EtwRegistration  
-0x84259628    300      0x2ac      0x804 EtwRegistration  
-0x842595b0    300      0x2b0      0x804 EtwRegistration  
-0x8427e328    300      0x2b4      0x804 EtwRegistration  
-0x8427e2b0    300      0x2b8      0x804 EtwRegistration  
-0x84262ea8    300      0x2bc      0x804 EtwRegistration  
-0x843af970    300      0x2c0   0x1f0003 Event            
-0x843b0090    300      0x2c4   0x1f0003 Event            
-0x84262e30    300      0x2c8      0x804 EtwRegistration  
-0x841f6a00    300      0x2cc      0x804 EtwRegistration  
-0x843b0ae8    300      0x2d0   0x1f0003 Event            
-0x843e4d90    300      0x2d4   0x1f0001 ALPC Port        
-0x843e5548    300      0x2d8   0x100080 File             \Device\Nsi
-0x86319c40    300      0x2dc  0x21f0003 Event            
-0x9546bef0    300      0x2e0   0x16019f File             \Device\Afd\Endpoint
-0x97a458b0    300      0x2e4   0x16019f File             \Device\Afd\Endpoint
-0x923cdc88    300      0x2e8   0x16019f File             \Device\Afd\Endpoint
-0x8551d9d8    300      0x2ec   0x16019f File             \Device\Afd\Endpoint
-0x85f91f80    300      0x2f0   0x16019f File             \Device\Afd\Endpoint
-0x952fe9b0    300      0x2f4   0x16019f File             \Device\Afd\Endpoint
-0x8cdfe140    300      0x2f8   0x16019f File             \Device\Afd\Endpoint
-0x862a72f0    300      0x2fc   0x16019f File             \Device\Afd\Endpoint
-0x861dd678    300      0x300   0x16019f File             \Device\Afd\Endpoint
-0x85f92560    300      0x304   0x16019f File             \Device\Afd\Endpoint
-0x843981f0    300      0x308   0x16019f File             \Device\Afd\Endpoint
-0x84396938    300      0x30c   0x16019f File             \Device\Afd\Endpoint
-0x8613ee60    300      0x310   0x16019f File             \Device\Afd\Endpoint
-0x860496d8    300      0x314   0x16019f File             \Device\Afd\Endpoint
-0x858da7d0    300      0x318   0x16019f File             \Device\Afd\Endpoint
-0x86091178    300      0x31c   0x16019f File             \Device\Afd\Endpoint
-0x84bb0f80    300      0x320   0x16019f File             \Device\Afd\Endpoint
-0x863aaf80    300      0x324   0x16019f File             \Device\Afd\Endpoint
-0x84baf538    300      0x328   0x16019f File             \Device\Afd\Endpoint
-0x8f8001c0    300      0x32c   0x16019f File             \Device\Afd\Endpoint
-0x8630eb78    300      0x330   0x16019f File             \Device\Afd\Endpoint
-0x843e5640    300      0x334   0x16019f File             \Device\Afd\Endpoint
-0x843e5738    300      0x338   0x16019f File             \Device\Afd\Endpoint
-0x843e5a20    300      0x33c   0x16019f File             \Device\Afd\Endpoint
-0x843e5b18    300      0x340   0x16019f File             \Device\Afd\Endpoint
-0x843e5c10    300      0x344   0x16019f File             \Device\Afd\Endpoint
-0x843e5f40    300      0x348   0x16019f File             \Device\Afd\Endpoint
-0x843e4380    300      0x34c   0x16019f File             \Device\Afd\Endpoint
-0x843e4478    300      0x350   0x16019f File             \Device\Afd\Endpoint
-0x843e4570    300      0x354   0x16019f File             \Device\Afd\Endpoint
-0x843e4668    300      0x358   0x16019f File             \Device\Afd\Endpoint
-0x843e47c0    300      0x35c   0x16019f File             \Device\Afd\Endpoint
-0x843e48b8    300      0x360   0x16019f File             \Device\Afd\Endpoint
-0x843e49b0    300      0x364   0x16019f File             \Device\Afd\Endpoint
-0x843e4cb8    300      0x368   0x16019f File             \Device\Afd\Endpoint
-0x843e4ec8    300      0x36c   0x16019f File             \Device\Afd\Endpoint
-0x843e4f80    300      0x370   0x16019f File             \Device\Afd\Endpoint
-0x843af560    300      0x374   0x16019f File             \Device\Afd\Endpoint
-0x843e7d00    300      0x378   0x16019f File             \Device\Afd\Endpoint
-0x843e7f80    300      0x37c   0x16019f File             \Device\Afd\Endpoint
-0x843e6900    300      0x380   0x16019f File             \Device\Afd\Endpoint
-0x843e6ab8    300      0x384   0x16019f File             \Device\Afd\Endpoint
-0x843e6c38    300      0x388   0x16019f File             \Device\Afd\Endpoint
-0x843e4aa8    300      0x38c   0x16019f File             \Device\Afd\Endpoint
-0x843e7ae0    300      0x390   0x16019f File             \Device\Afd\Endpoint
-0x843e4208    300      0x394   0x16019f File             \Device\Afd\Endpoint
-0x850062f8    300      0x398   0x16019f File             \Device\Afd\Endpoint
-0x842803f8    300      0x39c   0x16019f File             \Device\Afd\Endpoint
-0x93fff6f8    300      0x3a0   0x16019f File             \Device\Afd\Endpoint
-0x84386268    300      0x3a4   0x16019f File             \Device\Afd\Endpoint
-0x861c1b30    300      0x3a8   0x16019f File             \Device\Afd\Endpoint
-0x861501c0    300      0x3ac   0x16019f File             \Device\Afd\Endpoint
-0x843f6368    300      0x3b0   0x16019f File             \Device\Afd\Endpoint
-0x84322200    300      0x3b4   0x16019f File             \Device\Afd\Endpoint
-0x85f715c8    300      0x3b8   0x16019f File             \Device\Afd\Endpoint
-0x860c5d60    300      0x3bc   0x16019f File             \Device\Afd\Endpoint
-0x85402038    300      0x3c0   0x16019f File             \Device\Afd
-0x842d6c08    300      0x3c4   0x16019f File             \Device\Afd\Endpoint
-0x8430c278    300      0x3c8   0x16019f File             \Device\Afd\Endpoint
-0x84366288    300      0x3cc   0x16019f File             \Device\Afd\Endpoint
-0x843f6978    300      0x3d0   0x16019f File             \Device\Afd\Endpoint
-0x843ac978    300      0x3d4   0x16019f File             \Device\Afd\Endpoint
-0x8434adb8    300      0x3d8   0x16019f File             \Device\Afd\Endpoint
-0x843ac710    300      0x3dc   0x16019f File             \Device\Afd\Endpoint
-0x8430d3e0    300      0x3e0   0x16019f File             \Device\Afd\Endpoint
-0x8430d328    300      0x3e4   0x16019f File             \Device\Afd\Endpoint
-0x84367698    300      0x3e8   0x16019f File             \Device\Afd\Endpoint
-0x843672a8    300      0x3ec   0x16019f File             \Device\Afd\Endpoint
-0x84369950    300      0x3f0   0x16019f File             \Device\Afd\Endpoint
-0x84369398    300      0x3f4   0x16019f File             \Device\Afd\Endpoint
-0x843692e0    300      0x3f8   0x16019f File             \Device\Afd\Endpoint
-0x86238980    300      0x3fc   0x16019f File             \Device\Afd\Endpoint
-0x860ccd60    300      0x400   0x16019f File             \Device\Afd\Endpoint
-0x84369228    300      0x404   0x16019f File             \Device\Afd\Endpoint
-0x842fa3e0    300      0x408   0x16019f File             \Device\Afd\Endpoint
-0x8637a300    300      0x40c   0x16019f File             \Device\Afd\Endpoint
-0x842b3f80    300      0x410   0x16019f File             \Device\Afd\Endpoint
-0x860a3418    300      0x414   0x16019f File             \Device\Afd\Endpoint
-0x862d7bf8    300      0x418   0x16019f File             \Device\Afd\Endpoint
-0x8425c818    300      0x41c   0x16019f File             \Device\Afd\Endpoint
-0x841e7b80    300      0x420   0x16019f File             \Device\Afd\Endpoint
-0x843589d0    300      0x424   0x16019f File             \Device\Afd\Endpoint
-0x84358918    300      0x428   0x16019f File             \Device\Afd\Endpoint
-0x842f0580    300      0x42c   0x16019f File             \Device\Afd\Endpoint
-0x84349f80    300      0x430   0x16019f File             \Device\Afd\Endpoint
-0x843499c8    300      0x434   0x16019f File             \Device\Afd\Endpoint
-0x862a8038    300      0x438   0x16019f File             \Device\Afd\Endpoint
-0x855323e8    300      0x43c   0x16019f File             \Device\Afd\Endpoint
-0x842cb318    300      0x440   0x16019f File             \Device\Afd\Endpoint
-0x84278488    300      0x444   0x16019f File             \Device\Afd\Endpoint
-0x863f4330    300      0x448   0x16019f File             \Device\Afd\Endpoint
-0x863f4a60    300      0x44c   0x16019f File             \Device\Afd\Endpoint
-0x863f18f8    300      0x450   0x16019f File             \Device\Afd\Endpoint
-0x863f93a8    300      0x454   0x16019f File             \Device\Afd\Endpoint
-0x863f2c28    300      0x458   0x16019f File             \Device\Afd\Endpoint
-0x841d45d0    300      0x45c   0x16019f File             \Device\Afd\Endpoint
-0x862fa500    300      0x460   0x16019f File             \Device\Afd\Endpoint
-0x85402458    300      0x464   0x16019f File             \Device\Afd\Endpoint
-0x863ef450    300      0x468   0x16019f File             \Device\Afd\Endpoint
-0x8427b528    300      0x46c   0x16019f File             \Device\Afd\Endpoint
-0x84a02dc8    300      0x470   0x16019f File             \Device\Afd\Endpoint
-0x841e9038    300      0x474   0x16019f File             \Device\Afd\Endpoint
-0x84356940    300      0x478   0x16019f File             \Device\Afd\Endpoint
-0x841e9f80    300      0x47c   0x16019f File             \Device\Afd\Endpoint
-0x86131640    300      0x480   0x16019f File             \Device\Afd\Endpoint
-0x853ff518    300      0x484   0x16019f File             \Device\Afd\Endpoint
-0x85bad268    300      0x488   0x16019f File             \Device\Afd\Endpoint
-0x85baa378    300      0x48c   0x16019f File             \Device\Afd\Endpoint
-0x863f3be8    300      0x490   0x16019f File             \Device\Afd\Endpoint
-0x8434bd58    300      0x494   0x16019f File             \Device\Afd\Endpoint
-0x90546c70    300      0x498   0x16019f File             \Device\Afd\Endpoint
-0x86130258    300      0x49c   0x16019f File             \Device\Afd\Endpoint
-0x86130698    300      0x4a0   0x16019f File             \Device\Afd\Endpoint
-0x84356a00    300      0x4a4   0x16019f File             \Device\Afd\Endpoint
-0x86046038    300      0x4a8   0x16019f File             \Device\Afd\Endpoint
-0x8431eb98    300      0x4ac   0x16019f File             \Device\Afd\Endpoint
-0x8431ea28    300      0x4b0   0x16019f File             \Device\Afd\Endpoint
-0x84a02d10    300      0x4b4   0x16019f File             \Device\Afd\Endpoint
-0x8430dec8    300      0x4b8   0x16019f File             \Device\Afd\Endpoint
-0x863f00d8    300      0x4bc   0x16019f File             \Device\Afd\Endpoint
-0x86168d98    300      0x4c0   0x16019f File             \Device\Afd\Endpoint
-0x85532ac0    300      0x4c4   0x16019f File             \Device\Afd\Endpoint
-0x85532e58    300      0x4c8   0x16019f File             \Device\Afd\Endpoint
-0x842de7f0    300      0x4cc   0x16019f File             \Device\Afd\Endpoint
-0x85e25038    300      0x4d0   0x16019f File             \Device\Afd\Endpoint
-0x93f8e270    300      0x4d4   0x16019f File             \Device\Afd\Endpoint
-0x863efd18    300      0x4d8   0x16019f File             \Device\Afd\Endpoint
-0x86141b48    300      0x4dc   0x16019f File             \Device\Afd\Endpoint
-0x842da038    300      0x4e0   0x16019f File             \Device\Afd\Endpoint
-0x85e24388    300      0x4e4   0x16019f File             \Device\Afd\Endpoint
-0x855df510    300      0x4e8   0x16019f File             \Device\Afd\Endpoint
-0x8438d8a0    300      0x4ec   0x16019f File             \Device\Afd\Endpoint
-0x863ef960    300      0x4f0   0x16019f File             \Device\Afd\Endpoint
-0x841e9898    300      0x4f4   0x16019f File             \Device\Afd\Endpoint
-0x8434bf80    300      0x4f8   0x16019f File             \Device\Afd\Endpoint
-0x8434dd60    300      0x4fc   0x16019f File             \Device\Afd\Endpoint
-0x90546390    300      0x500   0x16019f File             \Device\Afd\Endpoint
-0x86130a40    300      0x504   0x16019f File             \Device\Afd\Endpoint
-0x841e9950    300      0x508   0x16019f File             \Device\Afd\Endpoint
-0x863f4420    300      0x50c   0x16019f File             \Device\Afd\Endpoint
-0x842fd210    300      0x510   0x16019f File             \Device\Afd\Endpoint
-0x84397500    300      0x514   0x16019f File             \Device\Afd\Endpoint
-0x8612f038    300      0x518   0x16019f File             \Device\Afd\Endpoint
-0x86299180    300      0x51c   0x16019f File             \Device\Afd\Endpoint
-0x842a6758    300      0x520   0x16019f File             \Device\Afd\Endpoint
-0x842a6458    300      0x524   0x16019f File             \Device\Afd\Endpoint
-0x863536f0    300      0x528   0x16019f File             \Device\Afd\Endpoint
-0x8434d210    300      0x52c   0x16019f File             \Device\Afd\Endpoint
-0x8437e8f8    300      0x530   0x16019f File             \Device\Afd\Endpoint
-0x8437d2a0    300      0x534   0x16019f File             \Device\Afd\Endpoint
-0x8437b2a0    300      0x538   0x16019f File             \Device\Afd\Endpoint
-0x860c0278    300      0x53c   0x16019f File             \Device\Afd\Endpoint
-0x8438b300    300      0x540   0x16019f File             \Device\Afd\Endpoint
-0x8435b280    300      0x544   0x16019f File             \Device\Afd\Endpoint
-0x8634e038    300      0x548   0x16019f File             \Device\Afd\Endpoint
-0x841f6be0    300      0x54c   0x16019f File             \Device\Afd\Endpoint
-0x841f7c48    300      0x550   0x16019f File             \Device\Afd\Endpoint
-0x85f7a9e8    300      0x554   0x16019f File             \Device\Afd\Endpoint
-0x84259910    300      0x558   0x16019f File             \Device\Afd\Endpoint
-0x84288800    300      0x55c   0x16019f File             \Device\Afd\Endpoint
-0x841f4530    300      0x560   0x16019f File             \Device\Afd\Endpoint
-0x843823c8    300      0x564   0x16019f File             \Device\Afd\Endpoint
-0x841f3940    300      0x568   0x16019f File             \Device\Afd\Endpoint
-0x842b1aa0    300      0x56c   0x16019f File             \Device\Afd\Endpoint
-0x86071408    300      0x570   0x16019f File             \Device\Afd\Endpoint
-0x862b6a68    300      0x574   0x16019f File             \Device\Afd\Endpoint
-0x842f7d50    300      0x578   0x16019f File             \Device\Afd\Endpoint
-0x86178a20    300      0x57c   0x16019f File             \Device\Afd\Endpoint
-0x8436a450    300      0x580   0x16019f File             \Device\Afd\Endpoint
-0x84287438    300      0x584   0x16019f File             \Device\Afd\Endpoint
-0x84279d60    300      0x588   0x16019f File             \Device\Afd\Endpoint
-0x84289a68    300      0x58c   0x16019f File             \Device\Afd\Endpoint
-0x842e2a78    300      0x590   0x16019f File             \Device\Afd\Endpoint
-0x842799b0    300      0x594   0x16019f File             \Device\Afd\Endpoint
-0x842eab98    300      0x598   0x16019f File             \Device\Afd\Endpoint
-0x842b6780    300      0x59c   0x16019f File             \Device\Afd\Endpoint
-0x84304190    300      0x5a0   0x16019f File             \Device\Afd\Endpoint
-0x842eadb8    300      0x5a4   0x16019f File             \Device\Afd\Endpoint
-0x843045b8    300      0x5a8   0x16019f File             \Device\Afd\Endpoint
-0x842f53a0    300      0x5ac   0x16019f File             \Device\Afd\Endpoint
-0x841e75a8    300      0x5b0   0x16019f File             \Device\Afd\Endpoint
-0x842f58d0    300      0x5b4   0x16019f File             \Device\Afd\Endpoint
-0x84305a60    300      0x5b8   0x16019f File             \Device\Afd\Endpoint
-0x843935f8    300      0x5bc   0x16019f File             \Device\Afd\Endpoint
-0x84389b48    300      0x5c0   0x16019f File             \Device\Afd\Endpoint
-0x85e25c70    300      0x5c4   0x16019f File             \Device\Afd\Endpoint
-0x842c02d0    300      0x5c8   0x16019f File             \Device\Afd\Endpoint
-0x842bb880    300      0x5cc   0x16019f File             \Device\Afd\Endpoint
-0x842d5a68    300      0x5d0   0x16019f File             \Device\Afd\Endpoint
-0x842f4c98    300      0x5d4   0x16019f File             \Device\Afd\Endpoint
-0x8425a268    300      0x5d8   0x16019f File             \Device\Afd\Endpoint
-0x85d4b490    300      0x5dc   0x16019f File             \Device\Afd\Endpoint
-0x8604b278    300      0x5e0   0x16019f File             \Device\Afd\Endpoint
-0x85efcd60    300      0x5e4   0x16019f File             \Device\Afd\Endpoint
-0x84299458    300      0x5e8   0x16019f File             \Device\Afd\Endpoint
-0x842dd360    300      0x5ec   0x16019f File             \Device\Afd\Endpoint
-0x842f4590    300      0x5f0   0x16019f File             \Device\Afd\Endpoint
-0x85f9bcd8    300      0x5f4   0x16019f File             \Device\Afd\Endpoint
-0x862d7ac0    300      0x5f8   0x16019f File             \Device\Afd\Endpoint
-0x85ff7038    300      0x5fc   0x16019f File             \Device\Afd\Endpoint
-0x84399298    300      0x600   0x16019f File             \Device\Afd\Endpoint
-0x842d7038    300      0x604   0x16019f File             \Device\Afd\Endpoint
-0x843a3890    300      0x608   0x16019f File             \Device\Afd\Endpoint
-0x842b7700    300      0x60c   0x16019f File             \Device\Afd\Endpoint
-0x843957a0    300      0x610   0x16019f File             \Device\Afd\Endpoint
-0x843393d0    300      0x614   0x16019f File             \Device\Afd\Endpoint
-0x85dfd398    300      0x618   0x16019f File             \Device\Afd\Endpoint
-0x860a2de8    300      0x61c   0x16019f File             \Device\Afd\Endpoint
-0x842b79d8    300      0x620   0x16019f File             \Device\Afd\Endpoint
-0x843a7228    300      0x624   0x16019f File             \Device\Afd\Endpoint
-0x843a7170    300      0x628   0x16019f File             \Device\Afd\Endpoint
-0x843a3038    300      0x62c   0x16019f File             \Device\Afd\Endpoint
-0x843a3cf0    300      0x630   0x16019f File             \Device\Afd\Endpoint
-0x843a3b80    300      0x634   0x16019f File             \Device\Afd\Endpoint
-0x843a3ac8    300      0x638   0x16019f File             \Device\Afd\Endpoint
-0x843a3a10    300      0x63c   0x16019f File             \Device\Afd\Endpoint
-0x84299c68    300      0x640   0x16019f File             \Device\Afd\Endpoint
-0x842fd400    300      0x644   0x16019f File             \Device\Afd\Endpoint
-0x842fd4b8    300      0x648   0x16019f File             \Device\Afd\Endpoint
-0x842f33d0    300      0x64c   0x16019f File             \Device\Afd\Endpoint
-0x843a9440    300      0x650   0x16019f File             \Device\Afd\Endpoint
-0x843ab620    300      0x654   0x16019f File             \Device\Afd\Endpoint
-0x84338668    300      0x658   0x16019f File             \Device\Afd\Endpoint
-0x843a4200    300      0x65c   0x16019f File             \Device\Afd\Endpoint
-0x843b86f0    300      0x660   0x16019f File             \Device\Afd\Endpoint
-0x843bd388    300      0x664   0x16019f File             \Device\Afd\Endpoint
-0x84387900    300      0x668   0x16019f File             \Device\Afd\Endpoint
-0x843bfa90    300      0x66c   0x16019f File             \Device\Afd\Endpoint
-0x843a6a78    300      0x670   0x16019f File             \Device\Afd\Endpoint
-0x8438a4d8    300      0x674   0x16019f File             \Device\Afd\Endpoint
-0x861c3850    300      0x678   0x16019f File             \Device\Afd\Endpoint
-0x843a9270    300      0x67c   0x16019f File             \Device\Afd\Endpoint
-0x843876d0    300      0x680   0x16019f File             \Device\Afd\Endpoint
-0x843a4920    300      0x684   0x16019f File             \Device\Afd\Endpoint
-0x843ca1f8    300      0x688   0x16019f File             \Device\Afd\Endpoint
-0x842eccc8    300      0x68c   0x16019f File             \Device\Afd\Endpoint
-0x843c1408    300      0x690   0x16019f File             \Device\Afd
-0x8426d758    300      0x694   0x16019f File             \Device\Afd\Endpoint
-0x84391360    300      0x698   0x16019f File             \Device\Afd\Endpoint
-0x843a5f80    300      0x69c   0x16019f File             \Device\Afd\Endpoint
-0x843bdf80    300      0x6a0   0x16019f File             \Device\Afd\Endpoint
-0x84336b30    300      0x6a4   0x16019f File             \Device\Afd\Endpoint
-0x843786f8    300      0x6a8   0x16019f File             \Device\Afd\Endpoint
-0x842ad110    300      0x6ac   0x16019f File             \Device\Afd\Endpoint
-0x843bb7f0    300      0x6b0   0x16019f File             \Device\Afd\Endpoint
-0x85f79868    300      0x6b4   0x16019f File             \Device\Afd\Endpoint
-0x843d5a58    300      0x6b8   0x16019f File             \Device\Afd\Endpoint
-0x84328d60    300      0x6bc   0x16019f File             \Device\Afd\Endpoint
-0x84a15380    300      0x6c0   0x16019f File             \Device\Afd\Endpoint
-0x843c4858    300      0x6c4   0x16019f File             \Device\Afd\Endpoint
-0x84378d60    300      0x6c8   0x16019f File             \Device\Afd\Endpoint
-0x843c2d60    300      0x6cc   0x16019f File             \Device\Afd\Endpoint
-0x843a49f0    300      0x6d0   0x16019f File             \Device\Afd\Endpoint
-0x84328440    300      0x6d4   0x16019f File             \Device\Afd\Endpoint
-0x842afa58    300      0x6d8   0x16019f File             \Device\Afd\Endpoint
-0x842af1c8    300      0x6dc   0x16019f File             \Device\Afd\Endpoint
-0x84387038    300      0x6e0   0x16019f File             \Device\Afd\Endpoint
-0x843c6308    300      0x6e4   0x16019f File             \Device\Afd\Endpoint
-0x8630bde0    300      0x6e8   0x16019f File             \Device\Afd\Endpoint
-0x86252880    300      0x6ec   0x16019f File             \Device\Afd\Endpoint
-0x98558580    300      0x6f0   0x16019f File             \Device\Afd\Endpoint
-0x974cb970    300      0x6f4   0x16019f File             \Device\Afd\Endpoint
-0x843c6a30    300      0x6f8   0x16019f File             \Device\Afd\Endpoint
-0x843c6c50    300      0x6fc   0x16019f File             \Device\Afd\Endpoint
-0x84380560    300      0x700   0x16019f File             \Device\Afd\Endpoint
-0x843c24d0    300      0x704   0x16019f File             \Device\Afd\Endpoint
-0x86355038    300      0x708   0x16019f File             \Device\Afd\Endpoint
-0x8634f688    300      0x70c   0x16019f File             \Device\Afd\Endpoint
-0x8634e6f8    300      0x710   0x16019f File             \Device\Afd\Endpoint
-0x8635b838    300      0x714   0x16019f File             \Device\Afd\Endpoint
-0x843caca8    300      0x718   0x16019f File             \Device\Afd\Endpoint
-0x84370ae0    300      0x71c   0x16019f File             \Device\Afd\Endpoint
-0x843da890    300      0x720   0x16019f File             \Device\Afd\Endpoint
-0x843d1760    300      0x724   0x16019f File             \Device\Afd\Endpoint
-0x84380480    300      0x728   0x16019f File             \Device\Afd\Endpoint
-0x8431ad50    300      0x72c   0x16019f File             \Device\Afd\Endpoint
-0x84328708    300      0x730   0x16019f File             \Device\Afd\Endpoint
-0x8426d3b8    300      0x734   0x16019f File             \Device\Afd\Endpoint
-0x843be5d8    300      0x738   0x16019f File             \Device\Afd\Endpoint
-0x843c2b40    300      0x73c   0x16019f File             \Device\Afd\Endpoint
-0x843a8d60    300      0x740   0x16019f File             \Device\Afd\Endpoint
-0x843a8920    300      0x744   0x16019f File             \Device\Afd\Endpoint
-0x843399d0    300      0x748   0x16019f File             \Device\Afd\Endpoint
-0x84387b30    300      0x74c   0x16019f File             \Device\Afd\Endpoint
-0x843d51a8    300      0x750   0x16019f File             \Device\Afd\Endpoint
-0x84394398    300      0x754   0x16019f File             \Device\Afd\Endpoint
-0x86130878    300      0x758   0x16019f File             \Device\Afd\Endpoint
-0x842b9cb8    300      0x75c   0x16019f File             \Device\Afd\Endpoint
-0x84ce2910    300      0x760   0x16019f File             \Device\Afd\Endpoint
-0x863650b8    300      0x764   0x16019f File             \Device\Afd\Endpoint
-0x86356b68    300      0x768   0x16019f File             \Device\Afd\Endpoint
-0x8637e268    300      0x76c   0x16019f File             \Device\Afd\Endpoint
-0x8431aa78    300      0x770   0x16019f File             \Device\Afd\Endpoint
-0x842604e8    300      0x774   0x16019f File             \Device\Afd\Endpoint
-0x8427cec8    300      0x778   0x16019f File             \Device\Afd\Endpoint
-0x8427cf80    300      0x77c   0x16019f File             \Device\Afd\Endpoint
-0x85ec4ec8    300      0x780   0x16019f File             \Device\Afd\Endpoint
-0x86261ae8    300      0x784   0x16019f File             \Device\Afd\Endpoint
-0x86162828    300      0x788   0x16019f File             \Device\Afd\Endpoint
-0x84295cf0    300      0x78c   0x16019f File             \Device\Afd\Endpoint
-0x8614d1b0    300      0x790   0x16019f File             \Device\Afd\Endpoint
-0x8438a978    300      0x794   0x16019f File             \Device\Afd\Endpoint
-0x843b6380    300      0x798   0x16019f File             \Device\Afd\Endpoint
-0x84295b70    300      0x79c   0x16019f File             \Device\Afd\Endpoint
-0x84260038    300      0x7a0   0x16019f File             \Device\Afd\Endpoint
-0x842af280    300      0x7a4   0x16019f File             \Device\Afd\Endpoint
-0x843c27b0    300      0x7a8   0x16019f File             \Device\Afd\Endpoint
-0x861c3798    300      0x7ac   0x16019f File             \Device\Afd\Endpoint
-0x84296f80    300      0x7b0   0x16019f File             \Device\Afd\Endpoint
-0x84260698    300      0x7b4   0x16019f File             \Device\Afd\Endpoint
-0x84260e00    300      0x7b8   0x16019f File             \Device\Afd\Endpoint
-0x84273738    300      0x7bc   0x16019f File             \Device\Afd\Endpoint
-0x85ee58a8    300      0x7c0   0x16019f File             \Device\Afd\Endpoint
-0x8612fd48    300      0x7c4   0x16019f File             \Device\Afd\Endpoint
-0x983fcf80    300      0x7c8   0x16019f File             \Device\Afd\Endpoint
-0x8424c858    300      0x7cc   0x16019f File             \Device\Afd\Endpoint
-0x8624a7b8    300      0x7d0   0x16019f File             \Device\Afd\Endpoint
-0x86350d60    300      0x7d4   0x16019f File             \Device\Afd\Endpoint
-0x8612e3c0    300      0x7d8   0x16019f File             \Device\Afd\Endpoint
-0x8612e100    300      0x7dc   0x16019f File             \Device\Afd\Endpoint
-0x86353418    300      0x7e0   0x16019f File             \Device\Afd\Endpoint
-0x860c66c8    300      0x7e4   0x16019f File             \Device\Afd\Endpoint
-0x85f7b968    300      0x7e8   0x16019f File             \Device\Afd\Endpoint
-0x863549e0    300      0x7ec   0x16019f File             \Device\Afd\Endpoint
-0x843d64c0    300      0x7f0   0x16019f File             \Device\Afd\Endpoint
-0x842afb30    300      0x7f4   0x16019f File             \Device\Afd\Endpoint
-0x8636a3b0    300      0x7f8   0x16019f File             \Device\Afd\Endpoint
-0x84327d60    300      0x7fc   0x16019f File             \Device\Afd\Endpoint
-0x842f3d60    300      0x804   0x16019f File             \Device\Afd\Endpoint
-0x862f1d60    300      0x808   0x16019f File             \Device\Afd\Endpoint
-0x842ae328    300      0x80c   0x16019f File             \Device\Afd\Endpoint
-0x843aaa78    300      0x810   0x16019f File             \Device\Afd\Endpoint
-0x843eb350    300      0x814   0x16019f File             \Device\Afd\Endpoint
-0x8438d3e0    300      0x818   0x16019f File             \Device\Afd\Endpoint
-0x862ea8f8    300      0x81c   0x16019f File             \Device\Afd\Endpoint
-0x86355e68    300      0x820   0x16019f File             \Device\Afd\Endpoint
-0x84a0e288    300      0x824   0x16019f File             \Device\Afd\Endpoint
-0x843e3288    300      0x828   0x16019f File             \Device\Afd\Endpoint
-0x843e1288    300      0x82c   0x16019f File             \Device\Afd\Endpoint
-0x8634e298    300      0x830   0x16019f File             \Device\Afd\Endpoint
-0x8612dea0    300      0x834   0x16019f File             \Device\Afd\Endpoint
-0x86374ef8    300      0x838   0x16019f File             \Device\Afd\Endpoint
-0x84a005e8    300      0x83c   0x16019f File             \Device\Afd\Endpoint
-0x8426e250    300      0x840   0x16019f File             \Device\Afd\Endpoint
-0x861e3038    300      0x844   0x16019f File             \Device\Afd\Endpoint
-0x842dc8b0    300      0x848   0x16019f File             \Device\Afd\Endpoint
-0x842d84b0    300      0x84c   0x16019f File             \Device\Afd\Endpoint
-0x842d8978    300      0x850   0x16019f File             \Device\Afd\Endpoint
-0x842d8e18    300      0x854   0x16019f File             \Device\Afd\Endpoint
-0x842f6698    300      0x858   0x16019f File             \Device\Afd\Endpoint
-0x842e0178    300      0x85c   0x16019f File             \Device\Afd\Endpoint
-0x842d88c0    300      0x860   0x16019f File             \Device\Afd\Endpoint
-0x843b4250    300      0x864   0x16019f File             \Device\Afd\Endpoint
-0x85ec4620    300      0x868   0x16019f File             \Device\Afd\Endpoint
-0x84388f80    300      0x86c   0x16019f File             \Device\Afd\Endpoint
-0x861e4c38    300      0x870   0x16019f File             \Device\Afd\Endpoint
-0x842c8090    300      0x874   0x16019f File             \Device\Afd\Endpoint
-0x84393920    300      0x878   0x16019f File             \Device\Afd\Endpoint
-0x861e52d0    300      0x87c   0x16019f File             \Device\Afd\Endpoint
-0x843f4b18    300      0x880   0x16019f File             \Device\Afd\Endpoint
-0x862cfbc8    300      0x884   0x16019f File             \Device\Afd\Endpoint
-0x8428c338    300      0x888   0x16019f File             \Device\Afd\Endpoint
-0x842a7588    300      0x88c   0x16019f File             \Device\Afd\Endpoint
-0x842cf268    300      0x890   0x16019f File             \Device\Afd\Endpoint
-0x843f4bf0    300      0x894   0x16019f File             \Device\Afd\Endpoint
-0x842a1698    300      0x898   0x16019f File             \Device\Afd\Endpoint
-0x842ea118    300      0x89c   0x16019f File             \Device\Afd\Endpoint
-0x8636a8c0    300      0x8a0   0x16019f File             \Device\Afd\Endpoint
-0x842da118    300      0x8a4   0x16019f File             \Device\Afd\Endpoint
-0x86148f80    300      0x8a8   0x16019f File             \Device\Afd\Endpoint
-0x8628cc68    300      0x8ac   0x16019f File             \Device\Afd\Endpoint
-0x843ea8f0    300      0x8b0   0x16019f File             \Device\Afd\Endpoint
-0x843e29a8    300      0x8b4   0x16019f File             \Device\Afd\Endpoint
-0x84257a28    300      0x8b8   0x16019f File             \Device\Afd\Endpoint
-0x84360a60    300      0x8bc   0x16019f File             \Device\Afd\Endpoint
-0x843eae18    300      0x8c0   0x16019f File             \Device\Afd\Endpoint
-0x843e0198    300      0x8c4   0x16019f File             \Device\Afd\Endpoint
-0x842a1320    300      0x8c8   0x16019f File             \Device\Afd\Endpoint
-0x861e4b80    300      0x8cc   0x16019f File             \Device\Afd\Endpoint
-0x97a45f18    300      0x8d0   0x16019f File             \Device\Afd\Endpoint
-0x843b2e18    300      0x8d4   0x16019f File             \Device\Afd\Endpoint
-0x843cef80    300      0x8d8   0x16019f File             \Device\Afd\Endpoint
-0x843ced60    300      0x8dc   0x16019f File             \Device\Afd\Endpoint
-0x843ef328    300      0x8e0   0x16019f File             \Device\Afd\Endpoint
-0x843ce648    300      0x8e4   0x16019f File             \Device\Afd\Endpoint
-0x84304d40    300      0x8e8   0x16019f File             \Device\Afd\Endpoint
-0x842a1948    300      0x8ec   0x16019f File             \Device\Afd\Endpoint
-0x84a03258    300      0x8f0   0x16019f File             \Device\Afd\Endpoint
-0x843e2850    300      0x8f4   0x16019f File             \Device\Afd\Endpoint
-0x8429d960    300      0x8f8   0x16019f File             \Device\Afd\Endpoint
-0x84276480    300      0x8fc   0x16019f File             \Device\Afd\Endpoint
-0x842a15c0    300      0x900   0x16019f File             \Device\Afd\Endpoint
-0x843ce300    300      0x904   0x16019f File             \Device\Afd\Endpoint
-0x842cb718    300      0x908   0x16019f File             \Device\Afd\Endpoint
-0x842b0a88    300      0x90c   0x16019f File             \Device\Afd\Endpoint
-0x8425f038    300      0x910   0x16019f File             \Device\Afd\Endpoint
-0x862c29f0    300      0x914   0x16019f File             \Device\Afd\Endpoint
-0x842cb260    300      0x918   0x16019f File             \Device\Afd\Endpoint
-0x84a02a30    300      0x91c   0x16019f File             \Device\Afd\Endpoint
-0x842c7e40    300      0x920   0x16019f File             \Device\Afd\Endpoint
-0x841f8468    300      0x924   0x16019f File             \Device\Afd\Endpoint
-0x842cd3b0    300      0x928   0x16019f File             \Device\Afd\Endpoint
-0x843e0250    300      0x92c   0x16019f File             \Device\Afd\Endpoint
-0x843d7a90    300      0x930   0x16019f File             \Device\Afd\Endpoint
-0x842a1268    300      0x934   0x16019f File             \Device\Afd\Endpoint
-0x84a0c278    300      0x938   0x16019f File             \Device\Afd\Endpoint
-0x843aad60    300      0x93c   0x16019f File             \Device\Afd\Endpoint
-0x84a085e0    300      0x940   0x16019f File             \Device\Afd\Endpoint
-0x861e3200    300      0x944   0x16019f File             \Device\Afd\Endpoint
-0x843ef270    300      0x948   0x16019f File             \Device\Afd\Endpoint
-0x84a20a68    300      0x94c   0x16019f File             \Device\Afd\Endpoint
-0x84a20d60    300      0x950   0x16019f File             \Device\Afd\Endpoint
-0x84a095c0    300      0x954   0x16019f File             \Device\Afd\Endpoint
-0x843fb630    300      0x958   0x16019f File             \Device\Afd\Endpoint
-0x8428c280    300      0x95c   0x16019f File             \Device\Afd\Endpoint
-0x843aa7a0    300      0x960   0x16019f File             \Device\Afd\Endpoint
-0x861d5d50    300      0x964   0x16019f File             \Device\Afd\Endpoint
-0x84a23348    300      0x968   0x16019f File             \Device\Afd\Endpoint
-0x843cd230    300      0x96c   0x16019f File             \Device\Afd\Endpoint
-0x84a0f5e0    300      0x970   0x16019f File             \Device\Afd\Endpoint
-0x843e8368    300      0x974   0x16019f File             \Device\Afd\Endpoint
-0x843e8940    300      0x978   0x16019f File             \Device\Afd\Endpoint
-0x843fb918    300      0x97c   0x16019f File             \Device\Afd\Endpoint
-0x843e8d50    300      0x980   0x16019f File             \Device\Afd\Endpoint
-0x843e9378    300      0x984   0x16019f File             \Device\Afd\Endpoint
-0x843e82b0    300      0x988   0x16019f File             \Device\Afd\Endpoint
-0x84a148b8    300      0x98c   0x16019f File             \Device\Afd\Endpoint
-0x843fcb40    300      0x990   0x16019f File             \Device\Afd\Endpoint
-0x843762a0    300      0x994   0x16019f File             \Device\Afd\Endpoint
-0x84a25300    300      0x998   0x16019f File             \Device\Afd\Endpoint
-0x84a06320    300      0x99c   0x16019f File             \Device\Afd\Endpoint
-0x84a06268    300      0x9a0   0x16019f File             \Device\Afd\Endpoint
-0x843cd478    300      0x9a4   0x16019f File             \Device\Afd\Endpoint
-0x84376860    300      0x9a8   0x16019f File             \Device\Afd\Endpoint
-0x860d0100    300      0x9ac   0x16019f File             \Device\Afd\Endpoint
-0x8439e2d8    300      0x9b0   0x16019f File             \Device\Afd\Endpoint
-0x84a20208    300      0x9b4   0x16019f File             \Device\Afd\Endpoint
-0x84a23290    300      0x9b8   0x16019f File             \Device\Afd\Endpoint
-0x84a1ab48    300      0x9bc   0x16019f File             \Device\Afd\Endpoint
-0x8439e4e0    300      0x9c0   0x16019f File             \Device\Afd\Endpoint
-0x8439e220    300      0x9c4   0x16019f File             \Device\Afd\Endpoint
-0x84a01620    300      0x9c8   0x16019f File             \Device\Afd\Endpoint
-0x8434da78    300      0x9cc   0x16019f File             \Device\Afd\Endpoint
-0x84a01338    300      0x9d0   0x16019f File             \Device\Afd
-0x842a6198    300      0x9d4   0x16019f File             \Device\Afd\Endpoint
-0x8439e5c0    300      0x9d8   0x16019f File             \Device\Afd\Endpoint
-0x843cdc48    300      0x9dc   0x16019f File             \Device\Afd\Endpoint
-0x84a1a318    300      0x9e0   0x16019f File             \Device\Afd\Endpoint
-0x84381b98    300      0x9e4   0x16019f File             \Device\Afd\Endpoint
-0x843815e0    300      0x9e8   0x16019f File             \Device\Afd\Endpoint
-0x84a18f80    300      0x9ec   0x16019f File             \Device\Afd\Endpoint
-0x84a18220    300      0x9f0   0x16019f File             \Device\Afd\Endpoint
-0x86098b40    300      0x9f4   0x16019f File             \Device\Afd\Endpoint
-0x8439ed60    300      0x9f8   0x16019f File             \Device\Afd\Endpoint
-0x84a1ac10    300      0x9fc   0x16019f File             \Device\Afd\Endpoint
-0x84a01280    300      0xa00   0x16019f File             \Device\Afd\Endpoint
-0x84a1ff80    300      0xa04   0x16019f File             \Device\Afd\Endpoint
-0x84a1f360    300      0xa08   0x16019f File             \Device\Afd\Endpoint
-0x842a6038    300      0xa0c   0x16019f File             \Device\Afd\Endpoint
-0x84376368    300      0xa10   0x16019f File             \Device\Afd\Endpoint
-0x84a24a80    300      0xa14   0x16019f File             \Device\Afd\Endpoint
-0x84a1c238    300      0xa18   0x16019f File             \Device\Afd\Endpoint
-0x84a1b2c0    300      0xa1c   0x16019f File             \Device\Afd\Endpoint
-0x84a1ad60    300      0xa20   0x16019f File             \Device\Afd\Endpoint
-0x84a27580    300      0xa24   0x16019f File             \Device\Afd\Endpoint
-0x84a24b98    300      0xa28   0x16019f File             \Device\Afd\Endpoint
-0x86369470    300      0xa2c   0x16019f File             \Device\Afd\Endpoint
-0x842a1b30    300      0xa30   0x16019f File             \Device\Afd\Endpoint
-0x84a09b40    300      0xa34   0x16019f File             \Device\Afd\Endpoint
-0x842a63a0    300      0xa38   0x16019f File             \Device\Afd\Endpoint
-0x842cb660    300      0xa3c   0x16019f File             \Device\Afd\Endpoint
-0x84a2dd50    300      0xa40   0x16019f File             \Device\Afd\Endpoint
-0x85f4f920    300      0xa44   0x16019f File             \Device\Afd\Endpoint
-0x84a249c8    300      0xa48   0x16019f File             \Device\Afd\Endpoint
-0x84a265d8    300      0xa4c   0x16019f File             \Device\Afd\Endpoint
-0x84a36a80    300      0xa50   0x16019f File             \Device\Afd\Endpoint
-0x842a8c38    300      0xa54   0x16019f File             \Device\Afd\Endpoint
-0x84a2fd60    300      0xa58   0x16019f File             \Device\Afd\Endpoint
-0x84a2f340    300      0xa5c   0x16019f File             \Device\Afd\Endpoint
-0x84a26690    300      0xa60   0x16019f File             \Device\Afd\Endpoint
-0x84a2d4a0    300      0xa64   0x16019f File             \Device\Afd\Endpoint
-0x84a2fe48    300      0xa68   0x16019f File             \Device\Afd\Endpoint
-0x86369230    300      0xa6c   0x16019f File             \Device\Afd\Endpoint
-0x84a2ccb0    300      0xa70   0x16019f File             \Device\Afd\Endpoint
-0x84a19038    300      0xa74   0x16019f File             \Device\Afd\Endpoint
-0x84a2eec8    300      0xa78   0x16019f File             \Device\Afd\Endpoint
-0x842a8728    300      0xa7c   0x16019f File             \Device\Afd\Endpoint
-0x84a289d0    300      0xa80   0x16019f File             \Device\Afd\Endpoint
-0x84a26a90    300      0xa84   0x16019f File             \Device\Afd\Endpoint
-0x84a2ee10    300      0xa88   0x16019f File             \Device\Afd\Endpoint
-0x84a2a6b0    300      0xa8c   0x16019f File             \Device\Afd\Endpoint
-0x8433a6b0    300      0xa90   0x16019f File             \Device\Afd\Endpoint
-0x84a2d298    300      0xa94   0x16019f File             \Device\Afd\Endpoint
-0x84a2e648    300      0xa98   0x16019f File             \Device\Afd\Endpoint
-0x84a2d6f8    300      0xa9c   0x16019f File             \Device\Afd\Endpoint
-0x84a2c300    300      0xaa0   0x16019f File             \Device\Afd\Endpoint
-0x84a19170    300      0xaa4   0x16019f File             \Device\Afd\Endpoint
-0x84a3d760    300      0xaa8   0x16019f File             \Device\Afd\Endpoint
-0x84a3d9a0    300      0xaac   0x16019f File             \Device\Afd\Endpoint
-0x842a8198    300      0xab0   0x16019f File             \Device\Afd\Endpoint
-0x84a31a90    300      0xab4   0x16019f File             \Device\Afd\Endpoint
-0x84a2c4e8    300      0xab8   0x16019f File             \Device\Afd\Endpoint
-0x84a06d58    300      0xabc   0x16019f File             \Device\Afd\Endpoint
-0x84a2ed00    300      0xac0   0x16019f File             \Device\Afd\Endpoint
-0x84a06e10    300      0xac4   0x16019f File             \Device\Afd\Endpoint
-0x84a06ec8    300      0xac8   0x16019f File             \Device\Afd\Endpoint
-0x84a06f80    300      0xacc   0x16019f File             \Device\Afd\Endpoint
-0x84a18ca8    300      0xad0   0x16019f File             \Device\Afd\Endpoint
-0x84a18d60    300      0xad4   0x16019f File             \Device\Afd\Endpoint
-0x84a1ba68    300      0xad8   0x16019f File             \Device\Afd\Endpoint
-0x842ed2d8    300      0xadc   0x16019f File             \Device\Afd\Endpoint
-0x842cb4f8    300      0xae0   0x16019f File             \Device\Afd\Endpoint
-0x843d76e8    300      0xae4   0x16019f File             \Device\Afd\Endpoint
-0x84263308    300      0xae8   0x16019f File             \Device\Afd\Endpoint
-0x84284b38    300      0xaec   0x16019f File             \Device\Afd\Endpoint
-0x842e9878    300      0xaf0   0x16019f File             \Device\Afd\Endpoint
-0x84a0c1c0    300      0xaf4   0x16019f File             \Device\Afd\Endpoint
-0x84a31480    300      0xaf8   0x16019f File             \Device\Afd\Endpoint
-0x8602be18    300      0xafc   0x16019f File             \Device\Afd\Endpoint
-0x84a1db98    300      0xb00   0x16019f File             \Device\Afd\Endpoint
-0x84a2ef80    300      0xb04   0x16019f File             \Device\Afd\Endpoint
-0x84a264e8    300      0xb08   0x16019f File             \Device\Afd\Endpoint
-0x84a28e48    300      0xb0c   0x16019f File             \Device\Afd\Endpoint
-0x84a3da58    300      0xb10   0x16019f File             \Device\Afd\Endpoint
-0x84a3d320    300      0xb14   0x16019f File             \Device\Afd\Endpoint
-0x84a43d00    300      0xb18   0x16019f File             \Device\Afd\Endpoint
-0x84a43b30    300      0xb1c   0x16019f File             \Device\Afd\Endpoint
-0x84a39530    300      0xb20   0x16019f File             \Device\Afd\Endpoint
-0x84a28150    300      0xb24   0x16019f File             \Device\Afd\Endpoint
-0x84a28208    300      0xb28   0x16019f File             \Device\Afd\Endpoint
-0x84a282c0    300      0xb2c   0x16019f File             \Device\Afd\Endpoint
-0x84a38120    300      0xb30   0x16019f File             \Device\Afd\Endpoint
-0x84a381d8    300      0xb34   0x16019f File             \Device\Afd\Endpoint
-0x84a3d6a8    300      0xb38   0x16019f File             \Device\Afd\Endpoint
-0x842a8320    300      0xb3c   0x16019f File             \Device\Afd\Endpoint
-0x84a38290    300      0xb40   0x16019f File             \Device\Afd\Endpoint
-0x84a38038    300      0xb44   0x16019f File             \Device\Afd\Endpoint
-0x84a371d0    300      0xb48   0x16019f File             \Device\Afd\Endpoint
-0x84a37288    300      0xb4c   0x16019f File             \Device\Afd\Endpoint
-0x84299108    300      0xb50   0x16019f File             \Device\Afd\Endpoint
-0x84299038    300      0xb54   0x16019f File             \Device\Afd\Endpoint
-0x84a433c0    300      0xb58   0x16019f File             \Device\Afd\Endpoint
-0x84a43478    300      0xb5c   0x16019f File             \Device\Afd\Endpoint
-0x84a43530    300      0xb60   0x16019f File             \Device\Afd\Endpoint
-0x84a18a80    300      0xb64   0x16019f File             \Device\Afd\Endpoint
-0x84a18b38    300      0xb68   0x16019f File             \Device\Afd\Endpoint
-0x84a18bf0    300      0xb6c   0x16019f File             \Device\Afd\Endpoint
-0x84a39c88    300      0xb70   0x16019f File             \Device\Afd\Endpoint
-0x84a391a8    300      0xb74   0x16019f File             \Device\Afd\Endpoint
-0x842bac98    300      0xb78   0x16019f File             \Device\Afd\Endpoint
-0x84a2dc98    300      0xb7c   0x16019f File             \Device\Afd\Endpoint
-0x84a313c8    300      0xb80   0x16019f File             \Device\Afd\Endpoint
-0x84a395e8    300      0xb84   0x16019f File             \Device\Afd\Endpoint
-0x84a28038    300      0xb88   0x16019f File             \Device\Afd\Endpoint
-0x84a3d818    300      0xb8c   0x16019f File             \Device\Afd\Endpoint
-0x842a85a0    300      0xb90   0x16019f File             \Device\Afd\Endpoint
-0x84a2e258    300      0xb94   0x16019f File             \Device\Afd\Endpoint
-0x84383508    300      0xb98   0x16019f File             \Device\Afd\Endpoint
-0x84284160    300      0xb9c   0x16019f File             \Device\Afd\Endpoint
-0x861e1d60    300      0xba0   0x16019f File             \Device\Afd\Endpoint
-0x86192268    300      0xba4   0x16019f File             \Device\Afd\Endpoint
-0x84a2a210    300      0xba8   0x16019f File             \Device\Afd\Endpoint
-0x84383338    300      0xbac   0x16019f File             \Device\Afd\Endpoint
-0x860be268    300      0xbb0   0x16019f File             \Device\Afd\Endpoint
-0x84a4e270    300      0xbb4   0x16019f File             \Device\Afd\Endpoint
-0x843a5268    300      0xbb8   0x16019f File             \Device\Afd\Endpoint
-0x84a41928    300      0xbbc   0x16019f File             \Device\Afd\Endpoint
-0x84a293d0    300      0xbc0   0x16019f File             \Device\Afd\Endpoint
-0x843cc7e8    300      0xbc4   0x16019f File             \Device\Afd\Endpoint
-0x86369038    300      0xbc8   0x16019f File             \Device\Afd\Endpoint
-0x85ed82e0    300      0xbcc   0x16019f File             \Device\Afd\Endpoint
-0x84383280    300      0xbd0   0x16019f File             \Device\Afd\Endpoint
-0x84a69348    300      0xbd4   0x16019f File             \Device\Afd\Endpoint
-0x8425fa90    300      0xbd8   0x16019f File             \Device\Afd\Endpoint
-0x843d9d50    300      0xbdc   0x16019f File             \Device\Afd\Endpoint
-0x84380a78    300      0xbe0   0x16019f File             \Device\Afd\Endpoint
-0x84a2fa88    300      0xbe4   0x16019f File             \Device\Afd\Endpoint
-0x843a0208    300      0xbe8   0x16019f File             \Device\Afd\Endpoint
-0x84a39d60    300      0xbec   0x16019f File             \Device\Afd\Endpoint
-0x843b1d60    300      0xbf0   0x16019f File             \Device\Afd\Endpoint
-0x84a3b778    300      0xbf4   0x16019f File             \Device\Afd\Endpoint
-0x84a1da28    300      0xbf8   0x16019f File             \Device\Afd\Endpoint
-0x84a43db8    300      0xbfc   0x16019f File             \Device\Afd\Endpoint
-0x84a69518    300      0xc00   0x16019f File             \Device\Afd\Endpoint
-0x8430f268    300      0xc04   0x16019f File             \Device\Afd\Endpoint
-0x84a3c170    300      0xc08   0x16019f File             \Device\Afd\Endpoint
-0x84a69940    300      0xc0c   0x16019f File             \Device\Afd\Endpoint
-0x84a3e860    300      0xc10   0x16019f File             \Device\Afd\Endpoint
-0x843b1680    300      0xc14   0x16019f File             \Device\Afd\Endpoint
-0x84a4a278    300      0xc18   0x16019f File             \Device\Afd\Endpoint
-0x84c11200    300      0xc1c   0x16019f File             \Device\Afd\Endpoint
-0x8f32d780    300      0xc20   0x16019f File             \Device\Afd\Endpoint
-0x985589c0    300      0xc24   0x16019f File             \Device\Afd\Endpoint
-0x84a36288    300      0xc28   0x16019f File             \Device\Afd\Endpoint
-0x842dadc8    300      0xc2c   0x16019f File             \Device\Afd\Endpoint
-0x842b8f38    300      0xc30   0x16019f File             \Device\Afd\Endpoint
-0x84a295d0    300      0xc34   0x16019f File             \Device\Afd\Endpoint
-0x84a39890    300      0xc38   0x16019f File             \Device\Afd\Endpoint
-0x84a69290    300      0xc3c   0x16019f File             \Device\Afd\Endpoint
-0x842be670    300      0xc40   0x16019f File             \Device\Afd\Endpoint
-0x84a69b40    300      0xc44   0x16019f File             \Device\Afd\Endpoint
-0x84c755a8    300      0xc48   0x16019f File             \Device\Afd\Endpoint
-0x84a39bd0    300      0xc4c   0x16019f File             \Device\Afd\Endpoint
-0x84a3d5f0    300      0xc50   0x16019f File             \Device\Afd\Endpoint
-0x86369b60    300      0xc54   0x16019f File             \Device\Afd\Endpoint
-0x84c11b30    300      0xc58   0x16019f File             \Device\Afd\Endpoint
-0x843776a8    300      0xc5c   0x16019f File             \Device\Afd\Endpoint
-0x843775f0    300      0xc60   0x16019f File             \Device\Afd\Endpoint
-0x843648b8    300      0xc64   0x16019f File             \Device\Afd\Endpoint
-0x8428ca78    300      0xc68   0x16019f File             \Device\Afd\Endpoint
-0x84c75a78    300      0xc6c   0x16019f File             \Device\Afd\Endpoint
-0x84377238    300      0xc70   0x16019f File             \Device\Afd\Endpoint
-0x84c77208    300      0xc74   0x16019f File             \Device\Afd\Endpoint
-0x84c88838    300      0xc78   0x16019f File             \Device\Afd\Endpoint
-0x8428cb58    300      0xc7c   0x16019f File             \Device\Afd\Endpoint
-0x84c75b58    300      0xc80   0x16019f File             \Device\Afd\Endpoint
-0x84364418    300      0xc84   0x16019f File             \Device\Afd\Endpoint
-0x84ca93b0    300      0xc88   0x16019f File             \Device\Afd\Endpoint
-0x8436fa80    300      0xc8c   0x16019f File             \Device\Afd\Endpoint
-0x8436f4c8    300      0xc90   0x16019f File             \Device\Afd\Endpoint
-0x8436f2f8    300      0xc94   0x16019f File             \Device\Afd\Endpoint
-0x8436f240    300      0xc98   0x16019f File             \Device\Afd\Endpoint
-0x84caef80    300      0xc9c   0x16019f File             \Device\Afd\Endpoint
-0x84cac360    300      0xca0   0x16019f File             \Device\Afd\Endpoint
-0x8428cc98    300      0xca4   0x16019f File             \Device\Afd\Endpoint
-0x84288330    300      0xca8   0x16019f File             \Device\Afd\Endpoint
-0x84302590    300      0xcac   0x16019f File             \Device\Afd\Endpoint
-0x84cae9a0    300      0xcb0   0x16019f File             \Device\Afd\Endpoint
-0x842a8670    300      0xcb4   0x16019f File             \Device\Afd\Endpoint
-0x843994e8    300      0xcb8   0x16019f File             \Device\Afd\Endpoint
-0x84a3db28    300      0xcbc   0x16019f File             \Device\Afd\Endpoint
-0x86369a40    300      0xcc0   0x16019f File             \Device\Afd\Endpoint
-0x8634e110    300      0xcc4   0x16019f File             \Device\Afd\Endpoint
-0x8429d4f8    300      0xcc8   0x16019f File             \Device\Afd\Endpoint
-0x86144f38    300      0xccc   0x16019f File             \Device\Afd\Endpoint
-0x842dab28    300      0xcd0   0x16019f File             \Device\Afd\Endpoint
-0x84327a98    300      0xcd4   0x16019f File             \Device\Afd\Endpoint
-0x84cabc38    300      0xcd8   0x16019f File             \Device\Afd\Endpoint
-0x843b6d50    300      0xcdc   0x16019f File             \Device\Afd\Endpoint
-0x843c5478    300      0xce0   0x16019f File             \Device\Afd\Endpoint
-0x84caab88    300      0xce4   0x16019f File             \Device\Afd\Endpoint
-0x84a37380    300      0xce8   0x16019f File             \Device\Afd\Endpoint
-0x84a2c248    300      0xcec   0x16019f File             \Device\Afd\Endpoint
-0x84cb22c0    300      0xcf0   0x16019f File             \Device\Afd\Endpoint
-0x84347330    300      0xcf4   0x16019f File             \Device\Afd\Endpoint
-0x84cb2208    300      0xcf8   0x16019f File             \Device\Afd\Endpoint
-0x861abbe8    300      0xcfc   0x16019f File             \Device\Afd\Endpoint
-0x84a4dd60    300      0xd00   0x16019f File             \Device\Afd\Endpoint
-0x84388238    300      0xd04   0x16019f File             \Device\Afd\Endpoint
-0x84347278    300      0xd08   0x16019f File             \Device\Afd\Endpoint
-0x84cb53e0    300      0xd0c   0x16019f File             \Device\Afd\Endpoint
-0x84cae648    300      0xd10   0x16019f File             \Device\Afd\Endpoint
-0x84a34ad8    300      0xd14   0x16019f File             \Device\Afd\Endpoint
-0x84cb6258    300      0xd18   0x16019f File             \Device\Afd\Endpoint
-0x843b6e70    300      0xd1c   0x16019f File             \Device\Afd\Endpoint
-0x84caf3a0    300      0xd20   0x16019f File             \Device\Afd\Endpoint
-0x84347d60    300      0xd24   0x16019f File             \Device\Afd\Endpoint
-0x84a4d3d0    300      0xd28   0x16019f File             \Device\Afd\Endpoint
-0x84cb6328    300      0xd2c   0x16019f File             \Device\Afd\Endpoint
-0x843b6f80    300      0xd30   0x16019f File             \Device\Afd\Endpoint
-0x84caf590    300      0xd34   0x16019f File             \Device\Afd\Endpoint
-0x84a40310    300      0xd38   0x16019f File             \Device\Afd\Endpoint
-0x84c77db8    300      0xd3c   0x16019f File             \Device\Afd\Endpoint
-0x84cae720    300      0xd40   0x16019f File             \Device\Afd\Endpoint
-0x84a40810    300      0xd44   0x16019f File             \Device\Afd\Endpoint
-0x84c71748    300      0xd48   0x16019f File             \Device\Afd\Endpoint
-0x84c75d50    300      0xd4c   0x16019f File             \Device\Afd\Endpoint
-0x84cb6778    300      0xd50   0x16019f File             \Device\Afd\Endpoint
-0x843b73e0    300      0xd54   0x16019f File             \Device\Afd\Endpoint
-0x84a463d8    300      0xd58   0x16019f File             \Device\Afd\Endpoint
-0x84a355f0    300      0xd5c   0x16019f File             \Device\Afd\Endpoint
-0x863698c0    300      0xd60   0x16019f File             \Device\Afd\Endpoint
-0x84c88280    300      0xd64   0x16019f File             \Device\Afd\Endpoint
-0x84cb55e0    300      0xd68   0x16019f File             \Device\Afd\Endpoint
-0x84349208    300      0xd6c   0x16019f File             \Device\Afd\Endpoint
-0x86131e60    300      0xd70   0x16019f File             \Device\Afd\Endpoint
-0x90546770    300      0xd74   0x16019f File             \Device\Afd\Endpoint
-0x85401270    300      0xd78   0x16019f File             \Device\Afd\Endpoint
-0x86279f80    300      0xd7c   0x16019f File             \Device\Afd\Endpoint
-0x8434be10    300      0xd80   0x16019f File             \Device\Afd\Endpoint
-0x863efc60    300      0xd84   0x16019f File             \Device\Afd\Endpoint
-0x85546bd8    300      0xd88   0x16019f File             \Device\Afd\Endpoint
-0x8428f108    300      0xd8c   0x16019f File             \Device\Afd\Endpoint
-0x8428f1c0    300      0xd90   0x16019f File             \Device\Afd\Endpoint
-0x8535d8b0    300      0xd94   0x16019f File             \Device\Afd\Endpoint
-0x8428f038    300      0xd98   0x16019f File             \Device\Afd\Endpoint
-0x842d0100    300      0xd9c   0x16019f File             \Device\Afd\Endpoint
-0x842d01b8    300      0xda0   0x16019f File             \Device\Afd\Endpoint
-0x842d0038    300      0xda4   0x16019f File             \Device\Afd\Endpoint
-0x843723b0    300      0xda8   0x16019f File             \Device\Afd\Endpoint
-0x843b7328    300      0xdac   0x16019f File             \Device\Afd\Endpoint
-0x84372468    300      0xdb0   0x16019f File             \Device\Afd\Endpoint
-0x84372520    300      0xdb4   0x16019f File             \Device\Afd\Endpoint
-0x8430d830    300      0xdb8   0x16019f File             \Device\Afd\Endpoint
-0x8430d8e8    300      0xdbc   0x16019f File             \Device\Afd\Endpoint
-0x85f579c0    300      0xdc0   0x16019f File             \Device\Afd\Endpoint
-0x85f57a78    300      0xdc4   0x16019f File             \Device\Afd\Endpoint
-0x85f57b30    300      0xdc8   0x16019f File             \Device\Afd\Endpoint
-0x85f57be8    300      0xdcc   0x16019f File             \Device\Afd\Endpoint
-0x86265b08    300      0xdd0   0x16019f File             \Device\Afd\Endpoint
-0x85401d08    300      0xdd4   0x16019f File             \Device\Afd\Endpoint
-0x8431e970    300      0xdd8   0x16019f File             \Device\Afd\Endpoint
-0x842d0a50    300      0xddc   0x16019f File             \Device\Afd\Endpoint
-0x8616a7a8    300      0xde0   0x16019f File             \Device\Afd\Endpoint
-0x8623e268    300      0xde4   0x16019f File             \Device\Afd\Endpoint
-0x8603cbd8    300      0xde8   0x16019f File             \Device\Afd\Endpoint
-0x8535e768    300      0xdec   0x16019f File             \Device\Afd\Endpoint
-0x8535e328    300      0xdf0   0x16019f File             \Device\Afd\Endpoint
-0x863ef5b8    300      0xdf4   0x16019f File             \Device\Afd\Endpoint
-0x85fb6bf8    300      0xdf8   0x16019f File             \Device\Afd\Endpoint
-0x84278550    300      0xdfc   0x16019f File             \Device\Afd\Endpoint
-0x842de5f8    300      0xe00   0x16019f File             \Device\Afd\Endpoint
-0x8636a980    300      0xe04   0x16019f File             \Device\Afd\Endpoint
-0x8428f278    300      0xe08   0x16019f File             \Device\Afd\Endpoint
-0x84356b80    300      0xe0c   0x16019f File             \Device\Afd\Endpoint
-0x842d0270    300      0xe10   0x16019f File             \Device\Afd\Endpoint
-0x843722f8    300      0xe14   0x16019f File             \Device\Afd\Endpoint
-0x943d3810    300      0xe18   0x16019f File             \Device\Afd\Endpoint
-0x84cbde10    300      0xe1c   0x16019f File             \Device\Afd\Endpoint
-0x96dff878    300      0xe20   0x16019f File             \Device\Afd\Endpoint
-0x86353a18    300      0xe24   0x16019f File             \Device\Afd\Endpoint
-0x843807a0    300      0xe28   0x16019f File             \Device\Afd\Endpoint
-0x84cca648    300      0xe2c   0x16019f File             \Device\Afd\Endpoint
-0x84cb9b98    300      0xe30   0x16019f File             \Device\Afd\Endpoint
-0x84cbd508    300      0xe34   0x16019f File             \Device\Afd\Endpoint
-0x84e4b518    300      0xe38   0x16019f File             \Device\Afd\Endpoint
-0x842ec038    300      0xe3c   0x16019f File             \Device\Afd\Endpoint
-0x84cbb280    300      0xe40   0x16019f File             \Device\Afd\Endpoint
-0x842779f0    300      0xe44   0x16019f File             \Device\Afd\Endpoint
-0x84a4c238    300      0xe48   0x16019f File             \Device\Afd\Endpoint
-0x842754e8    300      0xe4c   0x16019f File             \Device\Afd\Endpoint
-0x84cbf298    300      0xe50   0x16019f File             \Device\Afd\Endpoint
-0x84c13248    300      0xe54   0x16019f File             \Device\Afd\Endpoint
-0x84cb8248    300      0xe58   0x16019f File             \Device\Afd\Endpoint
-0x84264208    300      0xe5c   0x16019f File             \Device\Afd\Endpoint
-0x84a42670    300      0xe60   0x16019f File             \Device\Afd\Endpoint
-0x84cca850    300      0xe64   0x16019f File             \Device\Afd\Endpoint
-0x86369578    300      0xe68   0x16019f File             \Device\Afd\Endpoint
-0x84cc0b98    300      0xe6c   0x16019f File             \Device\Afd\Endpoint
-0x842649f0    300      0xe70   0x16019f File             \Device\Afd\Endpoint
-0x84c89530    300      0xe74   0x16019f File             \Device\Afd\Endpoint
-0x84a10288    300      0xe78   0x16019f File             \Device\Afd\Endpoint
-0x84a101d0    300      0xe7c   0x16019f File             \Device\Afd\Endpoint
-0x84cbe580    300      0xe80   0x16019f File             \Device\Afd\Endpoint
-0x84a12f80    300      0xe84   0x16019f File             \Device\Afd\Endpoint
-0x84a129c8    300      0xe88   0x16019f File             \Device\Afd\Endpoint
-0x84a12410    300      0xe8c   0x16019f File             \Device\Afd\Endpoint
-0x84a12240    300      0xe90   0x16019f File             \Device\Afd\Endpoint
-0x84cb38b8    300      0xe94   0x16019f File             \Device\Afd\Endpoint
-0x84cb3300    300      0xe98   0x16019f File             \Device\Afd\Endpoint
-0x84cc1b98    300      0xe9c   0x16019f File             \Device\Afd\Endpoint
-0x84cc1180    300      0xea0   0x16019f File             \Device\Afd\Endpoint
-0x84cbff80    300      0xea4   0x16019f File             \Device\Afd\Endpoint
-0x84cbfec8    300      0xea8   0x16019f File             \Device\Afd\Endpoint
-0x84cd12a0    300      0xeac   0x16019f File             \Device\Afd\Endpoint
-0x843dd318    300      0xeb0   0x16019f File             \Device\Afd\Endpoint
-0x843dd260    300      0xeb4   0x16019f File             \Device\Afd\Endpoint
-0x84274b98    300      0xeb8   0x16019f File             \Device\Afd\Endpoint
-0x84c899d0    300      0xebc   0x16019f File             \Device\Afd\Endpoint
-0x84cc1918    300      0xec0   0x16019f File             \Device\Afd\Endpoint
-0x84cd2bc0    300      0xec4   0x16019f File             \Device\Afd\Endpoint
-0x84cd3838    300      0xec8   0x16019f File             \Device\Afd\Endpoint
-0x84cd3280    300      0xecc   0x16019f File             \Device\Afd\Endpoint
-0x84cc6f80    300      0xed0   0x16019f File             \Device\Afd\Endpoint
-0x86365710    300      0xed4   0x16019f File             \Device\Afd\Endpoint
-0x84a46268    300      0xed8   0x16019f File             \Device\Afd\Endpoint
-0x84a10d50    300      0xedc   0x16019f File             \Device\Afd\Endpoint
-0x84cb5d60    300      0xee0   0x16019f File             \Device\Afd\Endpoint
-0x84cc2428    300      0xee4   0x16019f File             \Device\Afd\Endpoint
-0x84cc2370    300      0xee8   0x16019f File             \Device\Afd\Endpoint
-0x84cd2940    300      0xeec   0x16019f File             \Device\Afd\Endpoint
-0x84cd22e0    300      0xef0   0x16019f File             \Device\Afd\Endpoint
-0x84cd2228    300      0xef4   0x16019f File             \Device\Afd\Endpoint
-0x84cc6630    300      0xef8   0x16019f File             \Device\Afd\Endpoint
-0x84cd4b98    300      0xefc   0x16019f File             \Device\Afd\Endpoint
-0x863693b8    300      0xf00   0x16019f File             \Device\Afd\Endpoint
-0x86369300    300      0xf04   0x16019f File             \Device\Afd\Endpoint
-0x84cd3f80    300      0xf08   0x16019f File             \Device\Afd\Endpoint
-0x84cd2888    300      0xf0c   0x16019f File             \Device\Afd\Endpoint
-0x84cc6038    300      0xf10   0x16019f File             \Device\Afd\Endpoint
-0x84cc60f0    300      0xf14   0x16019f File             \Device\Afd\Endpoint
-0x843d5280    300      0xf18   0x16019f File             \Device\Afd\Endpoint
-0x84cd2db8    300      0xf1c   0x16019f File             \Device\Afd\Endpoint
-0x84cc7310    300      0xf20   0x16019f File             \Device\Afd\Endpoint
-0x84cc7258    300      0xf24   0x16019f File             \Device\Afd\Endpoint
-0x84cc7d50    300      0xf28   0x16019f File             \Device\Afd\Endpoint
-0x84cd5328    300      0xf2c   0x16019f File             \Device\Afd\Endpoint
-0x85f23880    300      0xf30   0x16019f File             \Device\Afd\Endpoint
-0x842b2848    300      0xf34   0x16019f File             \Device\Afd\Endpoint
-0x842998d8    300      0xf38   0x16019f File             \Device\Afd\Endpoint
-0x843a37a8    300      0xf3c   0x16019f File             \Device\Afd\Endpoint
-0x8436c1c0    300      0xf40   0x16019f File             \Device\Afd\Endpoint
-0x84395038    300      0xf44   0x16019f File             \Device\Afd\Endpoint
-0x84cd6a48    300      0xf48   0x16019f File             \Device\Afd\Endpoint
-0x84299990    300      0xf4c   0x16019f File             \Device\Afd\Endpoint
-0x843a7498    300      0xf50   0x16019f File             \Device\Afd\Endpoint
-0x843a7608    300      0xf54   0x16019f File             \Device\Afd\Endpoint
-0x84334298    300      0xf58   0x16019f File             \Device\Afd\Endpoint
-0x8436cc20    300      0xf5c   0x16019f File             \Device\Afd\Endpoint
-0x843b39d8    300      0xf60   0x16019f File             \Device\Afd\Endpoint
-0x84cc54d0    300      0xf64   0x16019f File             \Device\Afd\Endpoint
-0x84cc68b0    300      0xf68   0x16019f File             \Device\Afd\Endpoint
-0x943d3af0    300      0xf6c   0x16019f File             \Device\Afd\Endpoint
-0x84cdf320    300      0xf70   0x16019f File             \Device\Afd\Endpoint
-0x8437c4f0    300      0xf74   0x16019f File             \Device\Afd\Endpoint
-0x843c8d60    300      0xf78   0x16019f File             \Device\Afd\Endpoint
-0x843858e0    300      0xf7c   0x16019f File             \Device\Afd\Endpoint
-0x84ce0348    300      0xf80   0x16019f File             \Device\Afd\Endpoint
-0x84cd5638    300      0xf84   0x16019f File             \Device\Afd\Endpoint
-0x84c7d348    300      0xf88   0x16019f File             \Device\Afd\Endpoint
-0x863654d0    300      0xf8c   0x16019f File             \Device\Afd\Endpoint
-0x84a28ab0    300      0xf90   0x16019f File             \Device\Afd\Endpoint
-0x84334520    300      0xf94   0x16019f File             \Device\Afd\Endpoint
-0x84395c70    300      0xf98   0x16019f File             \Device\Afd\Endpoint
-0x84372b88    300      0xf9c   0x16019f File             \Device\Afd\Endpoint
-0x84cd56f8    300      0xfa0   0x16019f File             \Device\Afd\Endpoint
-0x842b58f8    300      0xfa4   0x16019f File             \Device\Afd\Endpoint
-0x8437c290    300      0xfa8   0x16019f File             \Device\Afd\Endpoint
-0x84ccc670    300      0xfac   0x16019f File             \Device\Afd\Endpoint
-0x84a3f410    300      0xfb0   0x16019f File             \Device\Afd\Endpoint
-0x84ce5b98    300      0xfb4   0x16019f File             \Device\Afd\Endpoint
-0x84305120    300      0xfb8   0x16019f File             \Device\Afd\Endpoint
-0x84cda270    300      0xfbc   0x16019f File             \Device\Afd\Endpoint
-0x84cd5860    300      0xfc0   0x16019f File             \Device\Afd\Endpoint
-0x842a4280    300      0xfc4   0x16019f File             \Device\Afd\Endpoint
-0x84cb7168    300      0xfc8   0x16019f File             \Device\Afd\Endpoint
-0x84ce0470    300      0xfcc   0x16019f File             \Device\Afd\Endpoint
-0x84cb7670    300      0xfd0   0x16019f File             \Device\Afd\Endpoint
-0x84cf06a8    300      0xfd4   0x16019f File             \Device\Afd\Endpoint
-0x84cf02b8    300      0xfd8   0x16019f File             \Device\Afd\Endpoint
-0x84ced418    300      0xfdc   0x16019f File             \Device\Afd\Endpoint
-0x863ef750    300      0xfe0   0x16019f File             \Device\Afd\Endpoint
-0x84ccc358    300      0xfe4   0x16019f File             \Device\Afd\Endpoint
-0x84a3f358    300      0xfe8   0x16019f File             \Device\Afd\Endpoint
-0x84ce5208    300      0xfec   0x16019f File             \Device\Afd\Endpoint
-0x84cdac10    300      0xff0   0x16019f File             \Device\Afd\Endpoint
-0x84a3f2a0    300      0xff4   0x16019f File             \Device\Afd\Endpoint
-0x843eef80    300      0xff8   0x16019f File             \Device\Afd\Endpoint
-0x843eedb0    300      0xffc   0x16019f File             \Device\Afd\Endpoint
-0x8432a5a0    300     0x1004   0x16019f File             \Device\Afd\Endpoint
-0x84a0a918    300     0x1008   0x16019f File             \Device\Afd\Endpoint
-0x84305c68    300     0x100c   0x16019f File             \Device\Afd\Endpoint
-0x86365350    300     0x1010   0x16019f File             \Device\Afd\Endpoint
-0x8634f840    300     0x1014   0x16019f File             \Device\Afd\Endpoint
-0x862e99d0    300     0x1018   0x16019f File             \Device\Afd\Endpoint
-0x84a0ad60    300     0x101c   0x16019f File             \Device\Afd\Endpoint
-0x84a0d238    300     0x1020   0x16019f File             \Device\Afd\Endpoint
-0x84a0d180    300     0x1024   0x16019f File             \Device\Afd\Endpoint
-0x84a44f80    300     0x1028   0x16019f File             \Device\Afd\Endpoint
-0x84a449c8    300     0x102c   0x16019f File             \Device\Afd\Endpoint
-0x860c94d8    300     0x1030   0x16019f File             \Device\Afd\Endpoint
-0x84a44410    300     0x1034   0x16019f File             \Device\Afd\Endpoint
-0x84a44240    300     0x1038   0x16019f File             \Device\Afd\Endpoint
-0x84cd93b8    300     0x103c   0x16019f File             \Device\Afd\Endpoint
-0x84cf1850    300     0x1040   0x16019f File             \Device\Afd\Endpoint
-0x84cf1398    300     0x1044   0x16019f File             \Device\Afd\Endpoint
-0x84cf48b8    300     0x1048   0x16019f File             \Device\Afd\Endpoint
-0x84cf4300    300     0x104c   0x16019f File             \Device\Afd\Endpoint
-0x84cf5b98    300     0x1050   0x16019f File             \Device\Afd\Endpoint
-0x84cf55e0    300     0x1054   0x16019f File             \Device\Afd\Endpoint
-0x84cf51f0    300     0x1058   0x16019f File             \Device\Afd\Endpoint
-0x862b3d60    300     0x105c   0x16019f File             \Device\Afd\Endpoint
-0x84cf0b98    300     0x1060   0x16019f File             \Device\Afd\Endpoint
-0x85e1cdb8    300     0x1064   0x16019f File             \Device\Afd\Endpoint
-0x84ccc2a0    300     0x1068   0x16019f File             \Device\Afd\Endpoint
-0x84cd6bf0    300     0x106c   0x16019f File             \Device\Afd\Endpoint
-0x84a0d6e8    300     0x1070   0x16019f File             \Device\Afd\Endpoint
-0x84cd6b38    300     0x1074   0x16019f File             \Device\Afd\Endpoint
-0x84cfe3e0    300     0x1078   0x16019f File             \Device\Afd\Endpoint
-0x8432a6f0    300     0x107c   0x16019f File             \Device\Afd\Endpoint
-0x843c47a0    300     0x1080   0x16019f File             \Device\Afd\Endpoint
-0x843d5b50    300     0x1084   0x16019f File             \Device\Afd\Endpoint
-0x843d6038    300     0x1088   0x16019f File             \Device\Afd\Endpoint
-0x84cf9870    300     0x108c   0x16019f File             \Device\Afd\Endpoint
-0x842d6658    300     0x1090   0x16019f File             \Device\Afd\Endpoint
-0x842ec658    300     0x1094   0x16019f File             \Device\Afd\Endpoint
-0x842ec3a0    300     0x1098   0x16019f File             \Device\Afd\Endpoint
-0x843b6570    300     0x109c   0x16019f File             \Device\Afd\Endpoint
-0x86223778    300     0x10a0   0x16019f File             \Device\Afd\Endpoint
-0x84311aa8    300     0x10a4   0x16019f File             \Device\Afd\Endpoint
-0x8637a248    300     0x10a8   0x16019f File             \Device\Afd\Endpoint
-0x842cfdc0    300     0x10ac   0x16019f File             \Device\Afd\Endpoint
-0x842e3b08    300     0x10b0   0x16019f File             \Device\Afd\Endpoint
-0x84cf97b8    300     0x10b4   0x16019f File             \Device\Afd\Endpoint
-0x84cfedb8    300     0x10b8   0x16019f File             \Device\Afd\Endpoint
-0x84cfed00    300     0x10bc   0x16019f File             \Device\Afd\Endpoint
-0x84cf9978    300     0x10c0   0x16019f File             \Device\Afd\Endpoint
-0x843cb8e0    300     0x10c4   0x16019f File             \Device\Afd\Endpoint
-0x84cfca80    300     0x10c8   0x16019f File             \Device\Afd\Endpoint
-0x84cfc4c8    300     0x10cc   0x16019f File             \Device\Afd\Endpoint
-0x84cfc2f8    300     0x10d0   0x16019f File             \Device\Afd\Endpoint
-0x84cfc240    300     0x10d4   0x16019f File             \Device\Afd\Endpoint
-0x84d00f80    300     0x10d8   0x16019f File             \Device\Afd\Endpoint
-0x84d009c8    300     0x10dc   0x16019f File             \Device\Afd\Endpoint
-0x84d002c8    300     0x10e0   0x16019f File             \Device\Afd\Endpoint
-0x84d01a80    300     0x10e4   0x16019f File             \Device\Afd\Endpoint
-0x85ff19c0    300     0x10e8   0x16019f File             \Device\Afd\Endpoint
-0x842b6ae8    300     0x10ec   0x16019f File             \Device\Afd\Endpoint
-0x85ed6130    300     0x10f0   0x16019f File             \Device\Afd\Endpoint
-0x84d02038    300     0x10f4   0x16019f File             \Device\Afd\Endpoint
-0x84d02a80    300     0x10f8   0x16019f File             \Device\Afd\Endpoint
-0x8426f610    300     0x10fc   0x16019f File             \Device\Afd\Endpoint
-0x842aa7b0    300     0x1100   0x16019f File             \Device\Afd\Endpoint
-0x842aa3c0    300     0x1104   0x16019f File             \Device\Afd\Endpoint
-0x842aa308    300     0x1108   0x16019f File             \Device\Afd\Endpoint
-0x84310580    300     0x110c   0x16019f File             \Device\Afd\Endpoint
-0x84d04f80    300     0x1110   0x16019f File             \Device\Afd\Endpoint
-0x84d04778    300     0x1114   0x16019f File             \Device\Afd\Endpoint
-0x841f63c0    300     0x1118   0x16019f File             \Device\Afd\Endpoint
-0x86365170    300     0x111c   0x16019f File             \Device\Afd\Endpoint
-0x84d06318    300     0x1120   0x16019f File             \Device\Afd\Endpoint
-0x84d06260    300     0x1124   0x16019f File             \Device\Afd\Endpoint
-0x986beca8    300     0x1128   0x16019f File             \Device\Afd\Endpoint
-0x84cf9408    300     0x112c   0x16019f File             \Device\Afd\Endpoint
-0x863f75d0    300     0x1130   0x16019f File             \Device\Afd\Endpoint
-0x863f7860    300     0x1134   0x16019f File             \Device\Afd\Endpoint
-0x863f77a8    300     0x1138   0x16019f File             \Device\Afd\Endpoint
-0x843317a0    300     0x113c   0x16019f File             \Device\Afd\Endpoint
-0x843316e8    300     0x1140   0x16019f File             \Device\Afd\Endpoint
-0x84ccd3b8    300     0x1144   0x16019f File             \Device\Afd\Endpoint
-0x84d09b98    300     0x1148   0x16019f File             \Device\Afd\Endpoint
-0x84d095e0    300     0x114c   0x16019f File             \Device\Afd\Endpoint
-0x842fb0d0    300     0x1150   0x16019f File             \Device\Afd\Endpoint
-0x843708c0    300     0x1154   0x16019f File             \Device\Afd\Endpoint
-0x84cfe860    300     0x1158   0x16019f File             \Device\Afd\Endpoint
-0x842a7640    300     0x115c   0x16019f File             \Device\Afd\Endpoint
-0x84cfe668    300     0x1160   0x16019f File             \Device\Afd\Endpoint
-0x84d06bf0    300     0x1164   0x16019f File             \Device\Afd\Endpoint
-0x843a1d60    300     0x1168   0x16019f File             \Device\Afd\Endpoint
-0x842d9868    300     0x116c   0x16019f File             \Device\Afd\Endpoint
-0x84cf94e0    300     0x1170   0x16019f File             \Device\Afd\Endpoint
-0x85fb81f8    300     0x1174   0x16019f File             \Device\Afd\Endpoint
-0x843a1a88    300     0x1178   0x16019f File             \Device\Afd\Endpoint
-0x843a19d0    300     0x117c   0x16019f File             \Device\Afd\Endpoint
-0x84d0a8b8    300     0x1180   0x16019f File             \Device\Afd\Endpoint
-0x84d0a260    300     0x1184   0x16019f File             \Device\Afd\Endpoint
-0x84d0d580    300     0x1188   0x16019f File             \Device\Afd\Endpoint
-0x84d0f940    300     0x118c   0x16019f File             \Device\Afd\Endpoint
-0x84d0f388    300     0x1190   0x16019f File             \Device\Afd\Endpoint
-0x84d10710    300     0x1194   0x16019f File             \Device\Afd\Endpoint
-0x84d11f80    300     0x1198   0x16019f File             \Device\Afd\Endpoint
-0x84d119c8    300     0x119c   0x16019f File             \Device\Afd\Endpoint
-0x86241bb8    300     0x11a0   0x16019f File             \Device\Afd\Endpoint
-```
+   <details>
+     <summary>
+       Output
+     </summary>
+      
+         ```
+         Offset(V)     Pid     Handle     Access Type             Details
+         ---------- ------ ---------- ---------- ---------------- -------
+         99ddf7c8    300        0x4        0x3 Directory        KnownDlls
+         0x84362038    300        0x8   0x100020 File             \Device\HarddiskVolume1\Users\0xSh3rl0ck\Desktop
+         0x843b02c8    300        0xc   0x100020 File             \Device\HarddiskVolume1\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18837_none_ec86b8d6858ec0bc
+         0x843adf80    300       0x10   0x100020 File             \Device\HarddiskVolume1\Windows\winsxs\x86_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.24203_none_5c030043a0118fbf
+         0x843ac528    300       0x14   0x1f0001 ALPC Port        
+         0x9c02bbb0    300       0x18    0x20019 Key              MACHINE\SYSTEM\CONTROLSET001\CONTROL\NLS\SORTING\VERSIONS
+         0xa88b3248    300       0x1c        0x1 Key              MACHINE\SYSTEM\CONTROLSET001\CONTROL\SESSION MANAGER
+         0x84396d18    300       0x20      0x804 EtwRegistration  
+         0x843b0698    300       0x24  0x21f0003 Event            
+         0x85ed4428    300       0x28    0xf037f WindowStation    WinSta0
+         0x85e9e590    300       0x2c    0xf01ff Desktop          Default
+         0x85ed4428    300       0x30    0xf037f WindowStation    WinSta0
+         0x9c018288    300       0x34    0xf003f Key              MACHINE
+         0x84396228    300       0x38      0x804 EtwRegistration  
+         0x84396298    300       0x3c   0x1f0003 Event            
+         0x843961e0    300       0x40   0x1f0003 Event            
+         0x843961a0    300       0x44   0x1f0003 Event            
+         0x84396460    300       0x48   0x1f0003 Event            
+         0x84396420    300       0x4c   0x1f0003 Event            
+         0x843963e0    300       0x50   0x1f0003 Event            
+         0x87cf6780    300       0x54        0xf Directory        BaseNamedObjects
+         0x843b0728    300       0x58   0x1f0001 Mutant           
+         0x843b0b28    300       0x5c   0x1f0001 Mutant           
+         0x843963a0    300       0x60   0x1f0003 Event            
+         0x84396640    300       0x64      0x804 EtwRegistration  
+         0x843965c8    300       0x68      0x804 EtwRegistration  
+         0x84398718    300       0x6c      0x804 EtwRegistration  
+         0x843986a0    300       0x70      0x804 EtwRegistration  
+         0x84398628    300       0x74      0x804 EtwRegistration  
+         0x843637c0    300       0x78      0x804 EtwRegistration  
+         0x84363748    300       0x7c      0x804 EtwRegistration  
+         0x843636d0    300       0x80      0x804 EtwRegistration  
+         0x843968c0    300       0x84      0x804 EtwRegistration  
+         0x84396848    300       0x88      0x804 EtwRegistration  
+         0x843967d0    300       0x8c      0x804 EtwRegistration  
+         0x843affc0    300       0x90      0x804 EtwRegistration  
+         0x843aff48    300       0x94      0x804 EtwRegistration  
+         0x843afe58    300       0x98      0x804 EtwRegistration  
+         0x843afed0    300       0x9c      0x804 EtwRegistration  
+         0x843afde0    300       0xa0      0x804 EtwRegistration  
+         0x84396580    300       0xa4   0x1f0003 Event            
+         0x843afd78    300       0xa8   0x100003 Semaphore        
+         0x843ae8e0    300       0xac   0x100003 Semaphore        
+         0x843c76b0    300       0xb0   0x100003 Semaphore        
+         0x8438fdd0    300       0xb4   0x100003 Semaphore        
+         0x8438fd88    300       0xb8   0x100003 Semaphore        
+         0x8438fd40    300       0xbc   0x100003 Semaphore        
+         0x8438fd00    300       0xc0   0x1f0003 Event            
+         0x8438fcc0    300       0xc4   0x1f0003 Event            
+         0x84398570    300       0xc8   0x120089 File             \Device\HarddiskVolume1\Windows\System32\en-US\msvfw32.dll.mui
+         0x843af460    300       0xcc   0x120089 File             \Device\HarddiskVolume1\Windows\System32\en-US\avicap32.dll.mui
+         0x9ca80fd0    300       0xd0    0xf003f Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000
+         0x84368df8    300       0xd4      0x804 EtwRegistration  
+         0x84368d80    300       0xd8      0x804 EtwRegistration  
+         0x84368c48    300       0xdc   0x1f0001 ALPC Port        
+         0x8fa4ddc8    300       0xe0        0x4 Section          
+         0x84368c00    300       0xe4   0x1f0003 Event            
+         0x8438f378    300       0xe8   0x1f0003 Event            
+         0x8438f338    300       0xec   0x1f0003 Event            
+         0x8438f1c8    300       0xf0      0x804 EtwRegistration  
+         0x8438f240    300       0xf4      0x804 EtwRegistration  
+         0x843c7038    300       0xf8   0x120089 File             \Device\HarddiskVolume1\Windows\System32\en-US\user32.dll.mui
+         0x8438f2b0    300       0xfc   0x1f0003 Event            
+         0x8436bd48    300      0x100   0x1fffff Thread           TID 3116 PID 300
+         0x8436bd08    300      0x104   0x1f0003 Event            
+         0x8436a030    300      0x108   0x1fffff Thread           TID 2144 PID 300
+         0x87d3bfd0    300      0x10c    0xf003f Key              MACHINE\SYSTEM\CONTROLSET001\SERVICES\WINSOCK2\PARAMETERS\PROTOCOL_CATALOG9
+         0x8438f0e8    300      0x110   0x1f0003 Event            
+         0x9c018370    300      0x114    0xf003f Key              MACHINE\SYSTEM\CONTROLSET001\SERVICES\WINSOCK2\PARAMETERS\NAMESPACE_CATALOG5
+         0x84398fa8    300      0x118   0x1f0003 Event            
+         0x84398f68    300      0x11c   0x1f0003 Event            
+         0x843c7700    300      0x120   0x100001 File             \Device\KsecDD
+         0x8fa8f8d0    300      0x124       0x28 Token            
+         0x84398f28    300      0x128   0x1f0003 Event            
+         0x84398ee8    300      0x12c   0x1f0003 Event            
+         0x84398ea8    300      0x130   0x1f0003 Event            
+         0x84398dc0    300      0x134      0x804 EtwRegistration  
+         0x84398e38    300      0x138      0x804 EtwRegistration  
+         0x84398d78    300      0x13c   0x1f0003 Event            
+         0x8436a030    300      0x140   0x1fffff Thread           TID 2144 PID 300
+         0x8db306a8    300      0x144   0x16019f File             \Device\Afd\Endpoint
+         0x862c5a40    300      0x148   0x1f0003 IoCompletion     
+         0x85e257a0    300      0x14c    0xf00ff TpWorkerFactory  
+         0xa7cd9d00    300      0x150    0xf0003 KeyedEvent       
+         0x86132d98    300      0x154   0x100002 Timer            
+         0x85e25100    300      0x158   0x1f0003 Timer            
+         0x843af688    300      0x15c   0x1fffff Thread           TID 3112 PID 300
+         0x843af688    300      0x160   0x1fffff Thread           TID 3112 PID 300
+         0x8b6ece00    300      0x164   0x1f0003 IoCompletion     
+         0x85e258e0    300      0x168    0xf00ff TpWorkerFactory  
+         0x843c71a0    300      0x16c  0x21f0003 Event            
+         0x842eb8b8    300      0x170   0x1f0001 Mutant           DC_MUTEX-KHNEW06
+         0x85e25598    300      0x174   0x100002 Timer            
+         0x843ad600    300      0x178   0x1fffff Thread           TID 2544 PID 300
+         0x843ad030    300      0x17c   0x1fffff Thread           TID 100 PID 300
+         0x9c028458    300      0x180    0xf003f Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000\SOFTWARE
+         0x8aaff6c8    300      0x184        0x6 Section          windows_shell_global_counters
+         0x9c0284b8    300      0x188    0x20019 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER\FOLDERDESCRIPTIONS\{905E63B6-C1BF-494E-B29C-65B732D3D21A}\PROPERTYBAG
+         0x843ad318    300      0x18c   0x1fffff Thread           TID 2740 PID 2556
+         0x84390030    300      0x190   0x1fffff Process          notepad.exe(2556)
+         0x84390380    300      0x194   0x1fffff Thread           TID 3008 PID 300
+         0x84390690    300      0x198   0x1fffff Thread           TID 3004 PID 2556
+         0x9c02a818    300      0x19c        0x8 Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION
+         0x9c02d180    300      0x1a0        0x8 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\APPCOMPATFLAGS
+         0xa7d89258    300      0x1a4        0x9 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\IMAGE FILE EXECUTION OPTIONS
+         0x843e5198    300      0x1a8  0x21f0003 Event            
+         0x843c9030    300      0x1ac   0x1fffff Thread           TID 200 PID 300
+         0x843e5218    300      0x1b0   0x1f0003 Event            
+         0x9c0294d8    300      0x1b4        0x1 Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER
+         0x843e51d8    300      0x1b8   0x1f0003 Event            
+         0x843e6748    300      0x1bc   0x100020 File             \Device\HarddiskVolume1\Windows\winsxs\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d
+         0x843c74d8    300      0x1c0      0x804 EtwRegistration  
+         0x843ac1e8    300      0x1c4      0x804 EtwRegistration  
+         0x9c02adb0    300      0x1c8    0xf003f Key              MACHINE\SOFTWARE\CLASSES
+         0xa887fc50    300      0x1cc    0xf003f Key              USER\S-1-5-21-4151118248-3926227922-3552599106-1000_CLASSES
+         0x886d6948    300      0x1d0        0x4 Section          __ComCatalogCache__
+         0x841ac310    300      0x1d4   0x100001 Event            MaximumCommitCondition
+         0x886d6948    300      0x1d8        0x4 Section          __ComCatalogCache__
+         0x843b0400    300      0x1dc      0x804 EtwRegistration  
+         0xa7d06030    300      0x1e0    0x20003 Directory        
+         0xa7cffb38    300      0x1e4        0x4 Section          ASqmManifestVersion
+         0x843e6d90    300      0x1e8   0x120089 File             \Device\HarddiskVolume1\Windows\Registration\R000000000006.clb
+         0x9c01b860    300      0x1ec    0xf0005 Section          
+         0x84384aa0    300      0x1f0      0x804 EtwRegistration  
+         0x84384a28    300      0x1f4      0x804 EtwRegistration  
+         0x9caa63f0    300      0x1f8        0x6 Section          windows_shell_global_counters
+         0x9c0283f8    300      0x1fc    0x20019 Key              MACHINE\SOFTWARE\MICROSOFT\WINDOWS\CURRENTVERSION\EXPLORER\FOLDERDESCRIPTIONS\{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}\PROPERTYBAG
+         0x84384920    300      0x200      0x804 EtwRegistration  
+         0x843e5310    300      0x204   0x1f0003 Event            
+         0x843848d0    300      0x208   0x100003 Semaphore        
+         0x84384888    300      0x20c   0x100003 Semaphore        
+         0x84384840    300      0x210   0x100003 Semaphore        
+         0x843847f8    300      0x214   0x100003 Semaphore        
+         0x843847b0    300      0x218   0x100003 Semaphore        
+         0x84384768    300      0x21c   0x100003 Semaphore        
+         0x843c9a58    300      0x220   0x100003 Semaphore        
+         0x843c9a10    300      0x224   0x100003 Semaphore        
+         0x843e70c8    300      0x228      0x804 EtwRegistration  
+         0x84262630    300      0x22c      0x804 EtwRegistration  
+         0x843e4528    300      0x230   0x1f0003 Event            
+         0x843ac810    300      0x234   0x1f0001 Mutant           
+         0x843e4620    300      0x238   0x1f0003 Event            
+         0x843ac7c0    300      0x23c   0x1f0001 Mutant           
+         0x843a5500    300      0x240   0x16019f File             \Device\Afd\Endpoint
+         0x860db9b8    300      0x244   0x16019f File             \Device\Afd\Endpoint
+         0x85f7ae88    300      0x248   0x1f0001 ALPC Port        
+         0x843c9030    300      0x24c   0x1fffff Thread           TID 200 PID 300
+         0x843e6ce8    300      0x250   0x1f0003 Event            
+         0x84363300    300      0x254  0x21f0003 Event            
+         0x84396d90    300      0x258      0x804 EtwRegistration  
+         0x843e6038    300      0x25c   0x16019f File             \Device\Afd\Endpoint
+         0x841e6b58    300      0x260      0x804 EtwRegistration  
+         0x85ba92c8    300      0x264      0x804 EtwRegistration  
+         0x861cc660    300      0x268      0x804 EtwRegistration  
+         0x843e66a0    300      0x26c   0x1f0003 Event            
+         0x843c9030    300      0x270   0x1fffff Thread           TID 200 PID 300
+         0x863569e0    300      0x274   0x16019f File             \Device\Afd\Endpoint
+         0x843e4870    300      0x278   0x1f0003 Event            
+         0x843e4968    300      0x27c   0x1f0003 Event            
+         0x843c9350    300      0x280   0x1f0003 Event            
+         0x965fffc0    300      0x284      0x804 EtwRegistration  
+         0x965fff48    300      0x288      0x804 EtwRegistration  
+         0x85456320    300      0x28c      0x804 EtwRegistration  
+         0x854562a8    300      0x290      0x804 EtwRegistration  
+         0x84297488    300      0x294      0x804 EtwRegistration  
+         0x84297410    300      0x298      0x804 EtwRegistration  
+         0x84259fc0    300      0x29c      0x804 EtwRegistration  
+         0x84259f48    300      0x2a0      0x804 EtwRegistration  
+         0x84270a70    300      0x2a4      0x804 EtwRegistration  
+         0x842709f8    300      0x2a8      0x804 EtwRegistration  
+         0x84259628    300      0x2ac      0x804 EtwRegistration  
+         0x842595b0    300      0x2b0      0x804 EtwRegistration  
+         0x8427e328    300      0x2b4      0x804 EtwRegistration  
+         0x8427e2b0    300      0x2b8      0x804 EtwRegistration  
+         0x84262ea8    300      0x2bc      0x804 EtwRegistration  
+         0x843af970    300      0x2c0   0x1f0003 Event            
+         0x843b0090    300      0x2c4   0x1f0003 Event            
+         0x84262e30    300      0x2c8      0x804 EtwRegistration  
+         0x841f6a00    300      0x2cc      0x804 EtwRegistration  
+         0x843b0ae8    300      0x2d0   0x1f0003 Event            
+         0x843e4d90    300      0x2d4   0x1f0001 ALPC Port        
+         0x843e5548    300      0x2d8   0x100080 File             \Device\Nsi
+         0x86319c40    300      0x2dc  0x21f0003 Event            
+         0x9546bef0    300      0x2e0   0x16019f File             \Device\Afd\Endpoint
+         0x97a458b0    300      0x2e4   0x16019f File             \Device\Afd\Endpoint
+         0x923cdc88    300      0x2e8   0x16019f File             \Device\Afd\Endpoint
+         0x8551d9d8    300      0x2ec   0x16019f File             \Device\Afd\Endpoint
+         0x85f91f80    300      0x2f0   0x16019f File             \Device\Afd\Endpoint
+         0x952fe9b0    300      0x2f4   0x16019f File             \Device\Afd\Endpoint
+         0x8cdfe140    300      0x2f8   0x16019f File             \Device\Afd\Endpoint
+         0x862a72f0    300      0x2fc   0x16019f File             \Device\Afd\Endpoint
+         0x861dd678    300      0x300   0x16019f File             \Device\Afd\Endpoint
+         0x85f92560    300      0x304   0x16019f File             \Device\Afd\Endpoint
+         0x843981f0    300      0x308   0x16019f File             \Device\Afd\Endpoint
+         0x84396938    300      0x30c   0x16019f File             \Device\Afd\Endpoint
+         0x8613ee60    300      0x310   0x16019f File             \Device\Afd\Endpoint
+         0x860496d8    300      0x314   0x16019f File             \Device\Afd\Endpoint
+         0x858da7d0    300      0x318   0x16019f File             \Device\Afd\Endpoint
+         0x86091178    300      0x31c   0x16019f File             \Device\Afd\Endpoint
+         0x84bb0f80    300      0x320   0x16019f File             \Device\Afd\Endpoint
+         0x863aaf80    300      0x324   0x16019f File             \Device\Afd\Endpoint
+         0x84baf538    300      0x328   0x16019f File             \Device\Afd\Endpoint
+         0x8f8001c0    300      0x32c   0x16019f File             \Device\Afd\Endpoint
+         0x8630eb78    300      0x330   0x16019f File             \Device\Afd\Endpoint
+         0x843e5640    300      0x334   0x16019f File             \Device\Afd\Endpoint
+         0x843e5738    300      0x338   0x16019f File             \Device\Afd\Endpoint
+         0x843e5a20    300      0x33c   0x16019f File             \Device\Afd\Endpoint
+         0x843e5b18    300      0x340   0x16019f File             \Device\Afd\Endpoint
+         0x843e5c10    300      0x344   0x16019f File             \Device\Afd\Endpoint
+         0x843e5f40    300      0x348   0x16019f File             \Device\Afd\Endpoint
+         0x843e4380    300      0x34c   0x16019f File             \Device\Afd\Endpoint
+         0x843e4478    300      0x350   0x16019f File             \Device\Afd\Endpoint
+         0x843e4570    300      0x354   0x16019f File             \Device\Afd\Endpoint
+         0x843e4668    300      0x358   0x16019f File             \Device\Afd\Endpoint
+         0x843e47c0    300      0x35c   0x16019f File             \Device\Afd\Endpoint
+         0x843e48b8    300      0x360   0x16019f File             \Device\Afd\Endpoint
+         0x843e49b0    300      0x364   0x16019f File             \Device\Afd\Endpoint
+         0x843e4cb8    300      0x368   0x16019f File             \Device\Afd\Endpoint
+         0x843e4ec8    300      0x36c   0x16019f File             \Device\Afd\Endpoint
+         0x843e4f80    300      0x370   0x16019f File             \Device\Afd\Endpoint
+         0x843af560    300      0x374   0x16019f File             \Device\Afd\Endpoint
+         0x843e7d00    300      0x378   0x16019f File             \Device\Afd\Endpoint
+         0x843e7f80    300      0x37c   0x16019f File             \Device\Afd\Endpoint
+         0x843e6900    300      0x380   0x16019f File             \Device\Afd\Endpoint
+         0x843e6ab8    300      0x384   0x16019f File             \Device\Afd\Endpoint
+         0x843e6c38    300      0x388   0x16019f File             \Device\Afd\Endpoint
+         0x843e4aa8    300      0x38c   0x16019f File             \Device\Afd\Endpoint
+         0x843e7ae0    300      0x390   0x16019f File             \Device\Afd\Endpoint
+         0x843e4208    300      0x394   0x16019f File             \Device\Afd\Endpoint
+         0x850062f8    300      0x398   0x16019f File             \Device\Afd\Endpoint
+         0x842803f8    300      0x39c   0x16019f File             \Device\Afd\Endpoint
+         0x93fff6f8    300      0x3a0   0x16019f File             \Device\Afd\Endpoint
+         0x84386268    300      0x3a4   0x16019f File             \Device\Afd\Endpoint
+         0x861c1b30    300      0x3a8   0x16019f File             \Device\Afd\Endpoint
+         0x861501c0    300      0x3ac   0x16019f File             \Device\Afd\Endpoint
+         0x843f6368    300      0x3b0   0x16019f File             \Device\Afd\Endpoint
+         0x84322200    300      0x3b4   0x16019f File             \Device\Afd\Endpoint
+         0x85f715c8    300      0x3b8   0x16019f File             \Device\Afd\Endpoint
+         0x860c5d60    300      0x3bc   0x16019f File             \Device\Afd\Endpoint
+         0x85402038    300      0x3c0   0x16019f File             \Device\Afd
+         0x842d6c08    300      0x3c4   0x16019f File             \Device\Afd\Endpoint
+         0x8430c278    300      0x3c8   0x16019f File             \Device\Afd\Endpoint
+         0x84366288    300      0x3cc   0x16019f File             \Device\Afd\Endpoint
+         0x843f6978    300      0x3d0   0x16019f File             \Device\Afd\Endpoint
+         0x843ac978    300      0x3d4   0x16019f File             \Device\Afd\Endpoint
+         0x8434adb8    300      0x3d8   0x16019f File             \Device\Afd\Endpoint
+         0x843ac710    300      0x3dc   0x16019f File             \Device\Afd\Endpoint
+         0x8430d3e0    300      0x3e0   0x16019f File             \Device\Afd\Endpoint
+         0x8430d328    300      0x3e4   0x16019f File             \Device\Afd\Endpoint
+         0x84367698    300      0x3e8   0x16019f File             \Device\Afd\Endpoint
+         0x843672a8    300      0x3ec   0x16019f File             \Device\Afd\Endpoint
+         0x84369950    300      0x3f0   0x16019f File             \Device\Afd\Endpoint
+         0x84369398    300      0x3f4   0x16019f File             \Device\Afd\Endpoint
+         0x843692e0    300      0x3f8   0x16019f File             \Device\Afd\Endpoint
+         0x86238980    300      0x3fc   0x16019f File             \Device\Afd\Endpoint
+         0x860ccd60    300      0x400   0x16019f File             \Device\Afd\Endpoint
+         0x84369228    300      0x404   0x16019f File             \Device\Afd\Endpoint
+         0x842fa3e0    300      0x408   0x16019f File             \Device\Afd\Endpoint
+         0x8637a300    300      0x40c   0x16019f File             \Device\Afd\Endpoint
+         0x842b3f80    300      0x410   0x16019f File             \Device\Afd\Endpoint
+         0x860a3418    300      0x414   0x16019f File             \Device\Afd\Endpoint
+         0x862d7bf8    300      0x418   0x16019f File             \Device\Afd\Endpoint
+         0x8425c818    300      0x41c   0x16019f File             \Device\Afd\Endpoint
+         0x841e7b80    300      0x420   0x16019f File             \Device\Afd\Endpoint
+         0x843589d0    300      0x424   0x16019f File             \Device\Afd\Endpoint
+         0x84358918    300      0x428   0x16019f File             \Device\Afd\Endpoint
+         0x842f0580    300      0x42c   0x16019f File             \Device\Afd\Endpoint
+         0x84349f80    300      0x430   0x16019f File             \Device\Afd\Endpoint
+         0x843499c8    300      0x434   0x16019f File             \Device\Afd\Endpoint
+         0x862a8038    300      0x438   0x16019f File             \Device\Afd\Endpoint
+         0x855323e8    300      0x43c   0x16019f File             \Device\Afd\Endpoint
+         0x842cb318    300      0x440   0x16019f File             \Device\Afd\Endpoint
+         0x84278488    300      0x444   0x16019f File             \Device\Afd\Endpoint
+         0x863f4330    300      0x448   0x16019f File             \Device\Afd\Endpoint
+         0x863f4a60    300      0x44c   0x16019f File             \Device\Afd\Endpoint
+         0x863f18f8    300      0x450   0x16019f File             \Device\Afd\Endpoint
+         0x863f93a8    300      0x454   0x16019f File             \Device\Afd\Endpoint
+         0x863f2c28    300      0x458   0x16019f File             \Device\Afd\Endpoint
+         0x841d45d0    300      0x45c   0x16019f File             \Device\Afd\Endpoint
+         0x862fa500    300      0x460   0x16019f File             \Device\Afd\Endpoint
+         0x85402458    300      0x464   0x16019f File             \Device\Afd\Endpoint
+         0x863ef450    300      0x468   0x16019f File             \Device\Afd\Endpoint
+         0x8427b528    300      0x46c   0x16019f File             \Device\Afd\Endpoint
+         0x84a02dc8    300      0x470   0x16019f File             \Device\Afd\Endpoint
+         0x841e9038    300      0x474   0x16019f File             \Device\Afd\Endpoint
+         0x84356940    300      0x478   0x16019f File             \Device\Afd\Endpoint
+         0x841e9f80    300      0x47c   0x16019f File             \Device\Afd\Endpoint
+         0x86131640    300      0x480   0x16019f File             \Device\Afd\Endpoint
+         0x853ff518    300      0x484   0x16019f File             \Device\Afd\Endpoint
+         0x85bad268    300      0x488   0x16019f File             \Device\Afd\Endpoint
+         0x85baa378    300      0x48c   0x16019f File             \Device\Afd\Endpoint
+         0x863f3be8    300      0x490   0x16019f File             \Device\Afd\Endpoint
+         0x8434bd58    300      0x494   0x16019f File             \Device\Afd\Endpoint
+         0x90546c70    300      0x498   0x16019f File             \Device\Afd\Endpoint
+         0x86130258    300      0x49c   0x16019f File             \Device\Afd\Endpoint
+         0x86130698    300      0x4a0   0x16019f File             \Device\Afd\Endpoint
+         0x84356a00    300      0x4a4   0x16019f File             \Device\Afd\Endpoint
+         0x86046038    300      0x4a8   0x16019f File             \Device\Afd\Endpoint
+         0x8431eb98    300      0x4ac   0x16019f File             \Device\Afd\Endpoint
+         0x8431ea28    300      0x4b0   0x16019f File             \Device\Afd\Endpoint
+         0x84a02d10    300      0x4b4   0x16019f File             \Device\Afd\Endpoint
+         0x8430dec8    300      0x4b8   0x16019f File             \Device\Afd\Endpoint
+         0x863f00d8    300      0x4bc   0x16019f File             \Device\Afd\Endpoint
+         0x86168d98    300      0x4c0   0x16019f File             \Device\Afd\Endpoint
+         0x85532ac0    300      0x4c4   0x16019f File             \Device\Afd\Endpoint
+         0x85532e58    300      0x4c8   0x16019f File             \Device\Afd\Endpoint
+         0x842de7f0    300      0x4cc   0x16019f File             \Device\Afd\Endpoint
+         0x85e25038    300      0x4d0   0x16019f File             \Device\Afd\Endpoint
+         0x93f8e270    300      0x4d4   0x16019f File             \Device\Afd\Endpoint
+         0x863efd18    300      0x4d8   0x16019f File             \Device\Afd\Endpoint
+         0x86141b48    300      0x4dc   0x16019f File             \Device\Afd\Endpoint
+         0x842da038    300      0x4e0   0x16019f File             \Device\Afd\Endpoint
+         0x85e24388    300      0x4e4   0x16019f File             \Device\Afd\Endpoint
+         0x855df510    300      0x4e8   0x16019f File             \Device\Afd\Endpoint
+         0x8438d8a0    300      0x4ec   0x16019f File             \Device\Afd\Endpoint
+         0x863ef960    300      0x4f0   0x16019f File             \Device\Afd\Endpoint
+         0x841e9898    300      0x4f4   0x16019f File             \Device\Afd\Endpoint
+         0x8434bf80    300      0x4f8   0x16019f File             \Device\Afd\Endpoint
+         0x8434dd60    300      0x4fc   0x16019f File             \Device\Afd\Endpoint
+         0x90546390    300      0x500   0x16019f File             \Device\Afd\Endpoint
+         0x86130a40    300      0x504   0x16019f File             \Device\Afd\Endpoint
+         0x841e9950    300      0x508   0x16019f File             \Device\Afd\Endpoint
+         0x863f4420    300      0x50c   0x16019f File             \Device\Afd\Endpoint
+         0x842fd210    300      0x510   0x16019f File             \Device\Afd\Endpoint
+         0x84397500    300      0x514   0x16019f File             \Device\Afd\Endpoint
+         0x8612f038    300      0x518   0x16019f File             \Device\Afd\Endpoint
+         0x86299180    300      0x51c   0x16019f File             \Device\Afd\Endpoint
+         0x842a6758    300      0x520   0x16019f File             \Device\Afd\Endpoint
+         0x842a6458    300      0x524   0x16019f File             \Device\Afd\Endpoint
+         0x863536f0    300      0x528   0x16019f File             \Device\Afd\Endpoint
+         0x8434d210    300      0x52c   0x16019f File             \Device\Afd\Endpoint
+         0x8437e8f8    300      0x530   0x16019f File             \Device\Afd\Endpoint
+         0x8437d2a0    300      0x534   0x16019f File             \Device\Afd\Endpoint
+         0x8437b2a0    300      0x538   0x16019f File             \Device\Afd\Endpoint
+         0x860c0278    300      0x53c   0x16019f File             \Device\Afd\Endpoint
+         0x8438b300    300      0x540   0x16019f File             \Device\Afd\Endpoint
+         0x8435b280    300      0x544   0x16019f File             \Device\Afd\Endpoint
+         0x8634e038    300      0x548   0x16019f File             \Device\Afd\Endpoint
+         0x841f6be0    300      0x54c   0x16019f File             \Device\Afd\Endpoint
+         0x841f7c48    300      0x550   0x16019f File             \Device\Afd\Endpoint
+         0x85f7a9e8    300      0x554   0x16019f File             \Device\Afd\Endpoint
+         0x84259910    300      0x558   0x16019f File             \Device\Afd\Endpoint
+         0x84288800    300      0x55c   0x16019f File             \Device\Afd\Endpoint
+         0x841f4530    300      0x560   0x16019f File             \Device\Afd\Endpoint
+         0x843823c8    300      0x564   0x16019f File             \Device\Afd\Endpoint
+         0x841f3940    300      0x568   0x16019f File             \Device\Afd\Endpoint
+         0x842b1aa0    300      0x56c   0x16019f File             \Device\Afd\Endpoint
+         0x86071408    300      0x570   0x16019f File             \Device\Afd\Endpoint
+         0x862b6a68    300      0x574   0x16019f File             \Device\Afd\Endpoint
+         0x842f7d50    300      0x578   0x16019f File             \Device\Afd\Endpoint
+         0x86178a20    300      0x57c   0x16019f File             \Device\Afd\Endpoint
+         0x8436a450    300      0x580   0x16019f File             \Device\Afd\Endpoint
+         0x84287438    300      0x584   0x16019f File             \Device\Afd\Endpoint
+         0x84279d60    300      0x588   0x16019f File             \Device\Afd\Endpoint
+         0x84289a68    300      0x58c   0x16019f File             \Device\Afd\Endpoint
+         0x842e2a78    300      0x590   0x16019f File             \Device\Afd\Endpoint
+         0x842799b0    300      0x594   0x16019f File             \Device\Afd\Endpoint
+         0x842eab98    300      0x598   0x16019f File             \Device\Afd\Endpoint
+         0x842b6780    300      0x59c   0x16019f File             \Device\Afd\Endpoint
+         0x84304190    300      0x5a0   0x16019f File             \Device\Afd\Endpoint
+         0x842eadb8    300      0x5a4   0x16019f File             \Device\Afd\Endpoint
+         0x843045b8    300      0x5a8   0x16019f File             \Device\Afd\Endpoint
+         0x842f53a0    300      0x5ac   0x16019f File             \Device\Afd\Endpoint
+         0x841e75a8    300      0x5b0   0x16019f File             \Device\Afd\Endpoint
+         0x842f58d0    300      0x5b4   0x16019f File             \Device\Afd\Endpoint
+         0x84305a60    300      0x5b8   0x16019f File             \Device\Afd\Endpoint
+         0x843935f8    300      0x5bc   0x16019f File             \Device\Afd\Endpoint
+         0x84389b48    300      0x5c0   0x16019f File             \Device\Afd\Endpoint
+         0x85e25c70    300      0x5c4   0x16019f File             \Device\Afd\Endpoint
+         0x842c02d0    300      0x5c8   0x16019f File             \Device\Afd\Endpoint
+         0x842bb880    300      0x5cc   0x16019f File             \Device\Afd\Endpoint
+         0x842d5a68    300      0x5d0   0x16019f File             \Device\Afd\Endpoint
+         0x842f4c98    300      0x5d4   0x16019f File             \Device\Afd\Endpoint
+         0x8425a268    300      0x5d8   0x16019f File             \Device\Afd\Endpoint
+         0x85d4b490    300      0x5dc   0x16019f File             \Device\Afd\Endpoint
+         0x8604b278    300      0x5e0   0x16019f File             \Device\Afd\Endpoint
+         0x85efcd60    300      0x5e4   0x16019f File             \Device\Afd\Endpoint
+         0x84299458    300      0x5e8   0x16019f File             \Device\Afd\Endpoint
+         0x842dd360    300      0x5ec   0x16019f File             \Device\Afd\Endpoint
+         0x842f4590    300      0x5f0   0x16019f File             \Device\Afd\Endpoint
+         0x85f9bcd8    300      0x5f4   0x16019f File             \Device\Afd\Endpoint
+         0x862d7ac0    300      0x5f8   0x16019f File             \Device\Afd\Endpoint
+         0x85ff7038    300      0x5fc   0x16019f File             \Device\Afd\Endpoint
+         0x84399298    300      0x600   0x16019f File             \Device\Afd\Endpoint
+         0x842d7038    300      0x604   0x16019f File             \Device\Afd\Endpoint
+         0x843a3890    300      0x608   0x16019f File             \Device\Afd\Endpoint
+         0x842b7700    300      0x60c   0x16019f File             \Device\Afd\Endpoint
+         0x843957a0    300      0x610   0x16019f File             \Device\Afd\Endpoint
+         0x843393d0    300      0x614   0x16019f File             \Device\Afd\Endpoint
+         0x85dfd398    300      0x618   0x16019f File             \Device\Afd\Endpoint
+         0x860a2de8    300      0x61c   0x16019f File             \Device\Afd\Endpoint
+         0x842b79d8    300      0x620   0x16019f File             \Device\Afd\Endpoint
+         0x843a7228    300      0x624   0x16019f File             \Device\Afd\Endpoint
+         0x843a7170    300      0x628   0x16019f File             \Device\Afd\Endpoint
+         0x843a3038    300      0x62c   0x16019f File             \Device\Afd\Endpoint
+         0x843a3cf0    300      0x630   0x16019f File             \Device\Afd\Endpoint
+         0x843a3b80    300      0x634   0x16019f File             \Device\Afd\Endpoint
+         0x843a3ac8    300      0x638   0x16019f File             \Device\Afd\Endpoint
+         0x843a3a10    300      0x63c   0x16019f File             \Device\Afd\Endpoint
+         0x84299c68    300      0x640   0x16019f File             \Device\Afd\Endpoint
+         0x842fd400    300      0x644   0x16019f File             \Device\Afd\Endpoint
+         0x842fd4b8    300      0x648   0x16019f File             \Device\Afd\Endpoint
+         0x842f33d0    300      0x64c   0x16019f File             \Device\Afd\Endpoint
+         0x843a9440    300      0x650   0x16019f File             \Device\Afd\Endpoint
+         0x843ab620    300      0x654   0x16019f File             \Device\Afd\Endpoint
+         0x84338668    300      0x658   0x16019f File             \Device\Afd\Endpoint
+         0x843a4200    300      0x65c   0x16019f File             \Device\Afd\Endpoint
+         0x843b86f0    300      0x660   0x16019f File             \Device\Afd\Endpoint
+         0x843bd388    300      0x664   0x16019f File             \Device\Afd\Endpoint
+         0x84387900    300      0x668   0x16019f File             \Device\Afd\Endpoint
+         0x843bfa90    300      0x66c   0x16019f File             \Device\Afd\Endpoint
+         0x843a6a78    300      0x670   0x16019f File             \Device\Afd\Endpoint
+         0x8438a4d8    300      0x674   0x16019f File             \Device\Afd\Endpoint
+         0x861c3850    300      0x678   0x16019f File             \Device\Afd\Endpoint
+         0x843a9270    300      0x67c   0x16019f File             \Device\Afd\Endpoint
+         0x843876d0    300      0x680   0x16019f File             \Device\Afd\Endpoint
+         0x843a4920    300      0x684   0x16019f File             \Device\Afd\Endpoint
+         0x843ca1f8    300      0x688   0x16019f File             \Device\Afd\Endpoint
+         0x842eccc8    300      0x68c   0x16019f File             \Device\Afd\Endpoint
+         0x843c1408    300      0x690   0x16019f File             \Device\Afd
+         0x8426d758    300      0x694   0x16019f File             \Device\Afd\Endpoint
+         0x84391360    300      0x698   0x16019f File             \Device\Afd\Endpoint
+         0x843a5f80    300      0x69c   0x16019f File             \Device\Afd\Endpoint
+         0x843bdf80    300      0x6a0   0x16019f File             \Device\Afd\Endpoint
+         0x84336b30    300      0x6a4   0x16019f File             \Device\Afd\Endpoint
+         0x843786f8    300      0x6a8   0x16019f File             \Device\Afd\Endpoint
+         0x842ad110    300      0x6ac   0x16019f File             \Device\Afd\Endpoint
+         0x843bb7f0    300      0x6b0   0x16019f File             \Device\Afd\Endpoint
+         0x85f79868    300      0x6b4   0x16019f File             \Device\Afd\Endpoint
+         0x843d5a58    300      0x6b8   0x16019f File             \Device\Afd\Endpoint
+         0x84328d60    300      0x6bc   0x16019f File             \Device\Afd\Endpoint
+         0x84a15380    300      0x6c0   0x16019f File             \Device\Afd\Endpoint
+         0x843c4858    300      0x6c4   0x16019f File             \Device\Afd\Endpoint
+         0x84378d60    300      0x6c8   0x16019f File             \Device\Afd\Endpoint
+         0x843c2d60    300      0x6cc   0x16019f File             \Device\Afd\Endpoint
+         0x843a49f0    300      0x6d0   0x16019f File             \Device\Afd\Endpoint
+         0x84328440    300      0x6d4   0x16019f File             \Device\Afd\Endpoint
+         0x842afa58    300      0x6d8   0x16019f File             \Device\Afd\Endpoint
+         0x842af1c8    300      0x6dc   0x16019f File             \Device\Afd\Endpoint
+         0x84387038    300      0x6e0   0x16019f File             \Device\Afd\Endpoint
+         0x843c6308    300      0x6e4   0x16019f File             \Device\Afd\Endpoint
+         0x8630bde0    300      0x6e8   0x16019f File             \Device\Afd\Endpoint
+         0x86252880    300      0x6ec   0x16019f File             \Device\Afd\Endpoint
+         0x98558580    300      0x6f0   0x16019f File             \Device\Afd\Endpoint
+         0x974cb970    300      0x6f4   0x16019f File             \Device\Afd\Endpoint
+         0x843c6a30    300      0x6f8   0x16019f File             \Device\Afd\Endpoint
+         0x843c6c50    300      0x6fc   0x16019f File             \Device\Afd\Endpoint
+         0x84380560    300      0x700   0x16019f File             \Device\Afd\Endpoint
+         0x843c24d0    300      0x704   0x16019f File             \Device\Afd\Endpoint
+         0x86355038    300      0x708   0x16019f File             \Device\Afd\Endpoint
+         0x8634f688    300      0x70c   0x16019f File             \Device\Afd\Endpoint
+         0x8634e6f8    300      0x710   0x16019f File             \Device\Afd\Endpoint
+         0x8635b838    300      0x714   0x16019f File             \Device\Afd\Endpoint
+         0x843caca8    300      0x718   0x16019f File             \Device\Afd\Endpoint
+         0x84370ae0    300      0x71c   0x16019f File             \Device\Afd\Endpoint
+         0x843da890    300      0x720   0x16019f File             \Device\Afd\Endpoint
+         0x843d1760    300      0x724   0x16019f File             \Device\Afd\Endpoint
+         ```
+   </details>
+
+

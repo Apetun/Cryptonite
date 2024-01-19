@@ -49,6 +49,12 @@
 
 #### Q7. Determine the API leveraged by the malware to retrieve the status of a specified virtual key on the keyboard.
 
+- After performing a procdump using the command ```python2 vol.py -f bruh.raw --profile=Win7SP1x86_23418 procdump -p 300 --dump-dir ./output``` we get an output file ```executable.300.exe```
+
+- Analysing the exe file in ghidra we can get the apis related to Keyboard used by the malware
+
+![alt text](https://github.com/Apetun/Cryptonite/blob/main/Writeups/Forensics/bruh.raw/Screenshot%202024-01-19%20170224.png)
+
 #### Q8. Investigate and disclose the Attacker's Command and Control (C2) domain name and port number in the format "domain name:port number."
 
 - Running the command ```python vol.py -f bruh.raw windows.netscan ``` yields no useful results

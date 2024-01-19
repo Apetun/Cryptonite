@@ -1,2 +1,2 @@
-# CryptoniteSTP
-Task Phase for Cryptonite
+# Cryptonite
+Resources and writeups related to cryptonite student project.

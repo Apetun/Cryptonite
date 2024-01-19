@@ -666,4 +666,9 @@ OFFLINEK={1} # Offline keylogging
          ```
    </details>
 
+#### Q13. Assist in determining the family classification of this malware.
+
+- We can find the family of the virus by submitting the SHA-256 string of ```de760a609a43e93318cc43ba353ed81361961324fc730dd4638e49a5fb022560``` from VirusTotal at https://www.talosintelligence.com/ which is ```DarkKomet```
+![alt text](https://github.com/Apetun/Cryptonite/blob/main/Writeups/Forensics/bruh.raw/Screenshot%202024-01-19%20164738.png)
+
 
